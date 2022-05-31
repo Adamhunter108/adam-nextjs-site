@@ -77,13 +77,13 @@ export default function Blog(props) {
                 </div>
                 ))} */}
 
-            <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+            <div className="relative bg-gradient-to-r from-black via-indigo-900 to-black pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
                 <div className="absolute inset-0">
-                    <div className="bg-black h-1/3 sm:h-2/3" />
+                    <div className="bg-gradient-to-t from-black via-indigo-900 to-black h-1/3 sm:h-2/3" />
                 </div>
                 <div className="relative max-w-7xl mx-auto">
                     <div className="text-center">
-                        <h2 className="text-3xl tracking-tight font-extrabold text-indigo-900 sm:text-4xl">From the blog</h2>
+                        <h2 className="text-3xl tracking-tight font-extrabold text-indigo-600 sm:text-4xl">blog</h2>
                         <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                         writings and musings
                         </p>
@@ -93,7 +93,7 @@ export default function Blog(props) {
 
                     {posts.slice(0).reverse().map((post) => (
 
-                    <div key={post.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                    <div key={post.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden">
                         {/* <div className="flex-shrink-0">
                             <img className="h-48 w-full object-cover" src="/images/adammindblown.png" alt="" />
                         </div> */}
@@ -101,7 +101,7 @@ export default function Blog(props) {
                         <div className="flex-shrink-0">
                             <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.url} alt="" />
                         </div>
-                        <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                        <div className="flex-1 bg-white/80 backdrop-blur-lg p-6 flex flex-col justify-between">
                             <div className="flex-1 cursor-pointer">
                                 <Link href={`/blog/${post.id}`}>
                                 <a href={post.href} className="block mt-2">
@@ -113,10 +113,10 @@ export default function Blog(props) {
                             <div className="mt-6 flex items-center">
                                 
                                 {/* ADAM PROFILE PIC */}
-                                {/* <div className="flex-shrink-0">
+                                <div className="flex-shrink-0">
                                     <span className="sr-only">Adam</span>
-                                    <img className="h-10 w-10 rounded-full" src="/images/adamhi.png" alt="" />
-                                </div> */}
+                                    <img className="h-20 w-20 rounded-full" src="/images/adampensive.png" alt="" />
+                                </div>
                                 <div className="ml-3">
                                 <p className="text-sm font-medium text-gray-900">
                                     Adam
