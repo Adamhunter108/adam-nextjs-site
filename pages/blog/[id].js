@@ -20,10 +20,10 @@ export default function PostPage(props) {
     })
     const BodyHtml = md.render(post.Body)
 
-    console.log(post.Header.data.attributes.url)
+    // console.log(post.Header.data.attributes.url)
 
     return(
-        <div>
+        <div className="bg-black">
 
             <Head>
                 <title>{post.Title}</title>
@@ -33,16 +33,33 @@ export default function PostPage(props) {
 
             {/* <SideBar /> */}
 
-            <main>
+            <header>
 
-                {/* <h1 className="pl-3 pt-5 text-3xl">Yo, this is post {routerID}</h1> */}
+                <div className="relative py-72 flex content-center items-center justify-center">
+                    <div
+                        className="absolute top-0 w-full h-full bg-center bg-cover bg-fixed"
+                        style={{
+                        backgroundImage:
+                            `url(${post.Header.data.attributes.url})`,
+                        }}
+                    >
+                        <span
+                        id="blackOverlay"
+                        className="w-full h-full absolute opacity-70 bg-black"
+                        ></span>
+                    </div>
+                </div>
 
-                <img className="h-48 w-full object-cover" src={post.Header.data.attributes.url} alt="header" />
+            </header>
 
-                <p className="pl-3 pt-5 text-xl">{post.Title}</p>
-                {/* <p className="pl-3 pt-5 text-l">{post.Body}</p> */}
+            <main className="">
 
-                <div className="pl-3 pt-5 text-l">
+                <h1 className="pl-3 pt-5 text-gray-100 text-5xl text-center">{post.Title}</h1>
+
+                <h2 className="pl-3 pt-5 text-gray-100 text-2xl text-center">{post.Description}</h2>
+
+
+                <div className="mx-16 lg:mx-48 pt-5 text-md text-gray-100">
                     <section dangerouslySetInnerHTML={{ __html: BodyHtml }}></section>
                 </div>
 
