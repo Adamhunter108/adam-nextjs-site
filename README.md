@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# adam-nextjs-site 👨‍💻
+
+### `About:` 
+A personal portfolio site built with Next.js and styled with Tailwind CSS. The site features static site generation, full SEO optimization, dynamic routing, a blog powered by a headless CMS ([blog-backend-strapi](https://github.com/Adamhunter108/blog-backend-strapi)) and custom React components.
+
+### `Tech Stack:`
+| JavaScript | Node.js | React | Next.js | Tailwind CSS |
+| :----: | :----: | :----: | :----: | :----: |
+| <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" width="50" height="50"/> |
+
+
+### `Local Development:`
+#### `Requirements:`
+
+* Node.js <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="25" height="25"/> 
+* `.env.local` for environment variables
+
+```bash
+$ # install dependencies
+$ npm i
+$ # start local development node.js server
+$ npm run develop
+$ # or
+$ yarn develop
+```
+
+
+<!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -31,4 +58,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->
