@@ -4,6 +4,9 @@ import axios from 'axios'
 import MarkdownIt from 'markdown-it'
 import SideBar from '../../components/SideBar'
 import Head from 'next/head'
+import Link from 'next/link'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {  faArrowLeftLong } from "@fortawesome/free-solid-svg-icons"
 
 
 export default function PostPage(props) {
@@ -53,6 +56,16 @@ export default function PostPage(props) {
             </header>
 
             <main className="">
+                <div className="pt-2 pl-5">
+                    <Link href="/blog">
+                        <button
+                            type="button"
+                            className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600/60 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        >
+                            <FontAwesomeIcon style={{fontSize:"25px"}} icon={faArrowLeftLong} />{' '} <a>Back</a>
+                        </button>
+                    </Link>
+                </div>
 
                 <h1 className="pl-3 pt-8 text-gray-100 text-bold text-5xl text-center">{post.Title}</h1>
 
@@ -82,6 +95,17 @@ export default function PostPage(props) {
                         </p>
                         </div>
                     </div>
+
+                    <div className="pt-2 pb-5 pl-5">
+                            <Link href="/blog">
+                                <button
+                                    type="button"
+                                    className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600/60 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                >
+                                    <FontAwesomeIcon style={{fontSize:"25px"}} icon={faArrowLeftLong} />{' '} <a>Back</a>
+                                </button>
+                            </Link>
+                        </div>
 
                     </div>
 

@@ -5,7 +5,7 @@ import Link from 'next/link'
 // import FlyOut from "../components/FlyOut";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHouseChimney, faBook, faEllipsisVertical  } from "@fortawesome/free-solid-svg-icons"
+import { faHouseChimney, faBook, faEllipsisVertical, faAddressCard  } from "@fortawesome/free-solid-svg-icons"
 
 
 function classNames(...classes) {
@@ -47,6 +47,15 @@ export default function NavBar() {
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >
                         <a>Home</a>
+                        </button>
+                    </Link>
+
+                    <Link href="/about">
+                        <button
+                        type="button"
+                        className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >
+                            <a>About</a>
                         </button>
                     </Link>
 
@@ -106,9 +115,18 @@ export default function NavBar() {
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 justify-center rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
+                        <FontAwesomeIcon className="text-emerald-500" style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
                     </Disclosure.Button>
                     </div>
+                </Link>
+
+                <Link href="/about">
+                    <Disclosure.Button
+                    type="button"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    >
+                        <FontAwesomeIcon className="text-emerald-500" style={{fontSize:"25px"}} icon={faAddressCard} /> <a>About</a>
+                    </Disclosure.Button>
                 </Link>
 
                 <Link href="/blog">
