@@ -77,10 +77,10 @@ export default function Blog(props) {
                 </div>
                 ))} */}
 
-            <div className="relative bg-gradient-to-r from-black via-indigo-900 to-black pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-                <div className="absolute inset-0">
-                    <div className="bg-gradient-to-t from-black via-indigo-900 to-black h-1/3 sm:h-2/3" />
-                </div>
+            <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+                {/* <div className="absolute inset-0">
+                    <div className="bg-gradient-to-t from-cyan-900 via-indigo-900 to-black h-1/3 sm:h-2/3" />
+                </div> */}
                 <div className="relative max-w-7xl mx-auto">
                     <div className="text-center">
                         <h2 className="text-3xl tracking-tight font-extrabold text-indigo-600 sm:text-4xl">blog</h2>

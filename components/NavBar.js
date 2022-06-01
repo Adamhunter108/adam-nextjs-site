@@ -115,7 +115,7 @@ export default function NavBar() {
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 justify-center rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon className="text-emerald-500" style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
+                        <FontAwesomeIcon className="text-cyan-700" style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
                     </Disclosure.Button>
                     </div>
                 </Link>
@@ -125,7 +125,7 @@ export default function NavBar() {
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon className="text-emerald-500" style={{fontSize:"25px"}} icon={faAddressCard} /> <a>About</a>
+                        <FontAwesomeIcon className="text-cyan-700" style={{fontSize:"25px"}} icon={faAddressCard} /> <a>About</a>
                     </Disclosure.Button>
                 </Link>
 
@@ -134,7 +134,7 @@ export default function NavBar() {
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon className="text-emerald-500" style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
+                        <FontAwesomeIcon className="text-cyan-700" style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
                     </Disclosure.Button>
                 </Link>
 
