@@ -78,16 +78,16 @@ export default function Blog(props) {
                 </div>
                 ))} */}
 
-            <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+            <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pt-20 pb-20 px-4 sm:px-6 lg:pt-15 lg:pb-28 lg:px-8">
                 {/* <div className="absolute inset-0">
                     <div className="bg-gradient-to-t from-cyan-900 via-indigo-900 to-black h-1/3 sm:h-2/3" />
                 </div> */}
                 <div className="relative max-w-7xl mx-auto">
                     <div className="text-center">
-                        <h2 className="text-3xl tracking-tight font-extrabold text-indigo-600 sm:text-4xl">blog</h2>
-                        <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                        <h1 className="text-3xl tracking-tight font-extrabold text-indigo-600 sm:text-4xl">blog</h1>
+                        <h2 className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                         writings and musings
-                        </p>
+                        </h2>
                     </div>
 
                 
@@ -118,7 +118,8 @@ export default function Blog(props) {
                         </div> */}
                         
                         <div className="flex-shrink-0">
-                            <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.url} alt="" />
+                            {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.url} alt="" /> */}
+                            <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.formats.small.url} alt="" />
                         </div>
                         <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                             <div className="flex-1 cursor-pointer">

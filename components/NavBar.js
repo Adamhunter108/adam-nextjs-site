@@ -50,14 +50,14 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    <Link href="/about">
+                    {/* <Link href="/about">
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >
                             <a>About</a>
                         </button>
-                    </Link>
+                    </Link> */}
 
                     <Link href="/blog">
                         <button
@@ -115,26 +115,26 @@ export default function NavBar() {
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 justify-center rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon className="text-cyan-700" style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
                     </Disclosure.Button>
                     </div>
                 </Link>
 
-                <Link href="/about">
+                {/* <Link href="/about">
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon className="text-cyan-700" style={{fontSize:"25px"}} icon={faAddressCard} /> <a>About</a>
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faAddressCard} /> <a>About</a>
                     </Disclosure.Button>
-                </Link>
+                </Link> */}
 
                 <Link href="/blog">
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon className="text-cyan-700" style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
                     </Disclosure.Button>
                 </Link>
 
