@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon, HomeIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
-// import FlyOut from "../components/FlyOut";
+import WeatherFlyOut from './WeatherFlyOut'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouseChimney, faBook, faEllipsisVertical, faAddressCard  } from "@fortawesome/free-solid-svg-icons"
@@ -72,8 +72,8 @@ export default function NavBar() {
                 </div>
               </div>
 
-              <div className="hidden sm:ml-6 sm:block">
-                {/* <FlyOut /> */}
+              <div className="hidden sm:ml-6 sm:block pt-5">
+                <WeatherFlyOut />
               </div>
 
               <div className="-mr-2 flex sm:hidden">
@@ -142,8 +142,8 @@ export default function NavBar() {
 
             <div className="pt-4 pb-3 border-t border-white/70">
 
-              <div className="pr-1">
-                {/* <FlyOut /> */}
+              <div className="pr-1 pt-2">
+                <WeatherFlyOut />
               </div>
             </div>
           </Disclosure.Panel>
