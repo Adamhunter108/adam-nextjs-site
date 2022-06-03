@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-// import FlyOut from "../components/FlyOut";
+import WeatherFlyOut from './WeatherFlyOut'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart, faPlaneArrival, faHouse, faCircleQuestion, faSackDollar, faXmark, faBars, faBarsStaggered, faBook } from "@fortawesome/free-solid-svg-icons"
@@ -86,7 +86,7 @@ export default function SideBar() {
             <div className="border-t border-white/40" />
 
 
-            {/* <FlyOut /> */}
+            {/* <WeatherFlyOut /> */}
 
             <div className="border-t border-white/40" />
 

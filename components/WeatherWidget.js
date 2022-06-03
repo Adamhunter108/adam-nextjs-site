@@ -28,7 +28,7 @@ export default function WeatherWidget() {
     }
 
   return (
-    <div className="p-6 w-96 h-40  backdrop-blur-md bg-gradient-to-r from-cyan-500/90 to-blue-500/90 rounded-full border-b border-t border-gray-200">
+    <div className="p-6 w-96 h-40 backdrop-blur-md bg-gradient-to-r from-cyan-500/90 to-blue-500/90 rounded-full border-b border-t border-gray-200">
         <div className="flex flex-row">
             <div className="text-white p-3 text-center inline-flex items-center justify-center shadow-lg rounded-full bg-sky-200">
                 <img src={weatherData.icon} alt='icon' width="105"/>

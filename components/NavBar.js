@@ -72,7 +72,7 @@ export default function NavBar() {
                 </div>
               </div>
 
-              <div className="hidden sm:ml-6 sm:block pt-5">
+              <div className="hidden sm:ml-6 sm:block">
                 <WeatherFlyOut />
               </div>
 
@@ -142,7 +142,7 @@ export default function NavBar() {
 
             <div className="pt-4 pb-3 border-t border-white/70">
 
-              <div className="pr-1 pt-2">
+              <div className="pr-5 pt-1">
                 <WeatherFlyOut />
               </div>
             </div>

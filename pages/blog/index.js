@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 // import SideBar from '../components/SideBar'
 import NavBar from '../../components/NavBar'
+import Footer from '../../components/Footer'
 import { motion } from "framer-motion"
 
 export default function Blog(props) {
@@ -163,7 +164,7 @@ export default function Blog(props) {
                 </div>
             </div>
 
-
+        <Footer />
     </div>
   )
 }

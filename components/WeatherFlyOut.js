@@ -47,7 +47,7 @@ export default function WeatherFlyOut() {
             <span>
                 
                 {/* <FontAwesomeIcon className="pl-1 pt-1" style={{fontSize:"20px"}} icon={faCloudBolt} /> Live Weather */}
-                <div className="text-white text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-gradient-to-t from-indigo-400 to bg-cyan-400">
+                <div className="text-white text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-gradient-to-t from-indigo-400 to bg-cyan-400">
                     {/* <FontAwesomeIcon style={{fontSize:"25px"}} icon={faCloudBolt}></FontAwesomeIcon> */}
                     <img src={weatherData.icon} alt='icon' width="35"/>
 
