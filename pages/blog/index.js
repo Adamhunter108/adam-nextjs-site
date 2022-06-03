@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Head from 'next/Head'
 import Link from 'next/link'
+import Image from 'next/image'
 // import SideBar from '../components/SideBar'
 import NavBar from '../../components/NavBar'
 import { motion } from "framer-motion"
@@ -119,7 +120,16 @@ export default function Blog(props) {
                         
                         <div className="flex-shrink-0">
                             {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.url} alt="" /> */}
-                            <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.formats.small.url} alt="" />
+                            {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.formats.small.url} alt="" /> */}
+                            <Image
+                                className="h-48 w-full object-cover"
+                                src={post.attributes.Header.data.attributes.url}
+                                width={600}
+                                height={300}
+                                // layout="fill"
+                                // placeholder="blur"
+                                alt="blog post header"
+                            />
                         </div>
                         <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                             <div className="flex-1 cursor-pointer">

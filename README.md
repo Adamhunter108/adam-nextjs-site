@@ -1,7 +1,7 @@
 # adam-nextjs-site 👨‍💻
 
 ### `About:` 
-A personal portfolio site built with Next.js and styled with Tailwind CSS. The site features static site generation, full SEO optimization, dynamic routing, a blog powered by a headless CMS ([blog-backend-strapi](https://github.com/Adamhunter108/blog-backend-strapi)) and custom React components.
+A personal portfolio/blog built with Next.js and styled with Tailwind CSS. The site features SEO, accessibility and image optimization, static site generation, dynamic routing, API consumption from a headless CMS ([blog-backend-strapi](https://github.com/Adamhunter108/blog-backend-strapi)), custom built React components, animations and a fully responsive design.
 
 ### `Tech Stack:`
 | JavaScript | Node.js | React | Next.js | Tailwind CSS |
