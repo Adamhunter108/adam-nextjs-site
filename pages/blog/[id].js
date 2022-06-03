@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {  faArrowLeftLong } from "@fortawesome/free-solid-svg-icons"
+import { motion } from "framer-motion"
 
 
 export default function PostPage(props) {

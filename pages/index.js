@@ -3,9 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import NavBar from '../components/NavBar'
 import Link from 'next/link'
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLaptopCode, faDumpsterFire, faHandSpock, faOm, faKitchenSet, faGhost, faBrain  } from "@fortawesome/free-solid-svg-icons"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
@@ -42,12 +42,64 @@ export default function Home() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="">
                   
-                  <h1 className="text-white font-semibold text-5xl">
-                    Adam Hunter
-                  </h1>
+                  <motion.div initial="hidden" animate="visible" variants={{
+                    hidden: {
+                      scale: .5,
+                      opacity: 0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1,
+                      transition: {
+                        delay: .1,
+                        type: 'tween',
+                        duration: 2
+                      }
+                    }
+                  }}>
+                    <h1 className="text-white font-semibold text-5xl">
+                      Adam Hunter
+                    </h1>
+                  </motion.div>
+                  {/* <motion.div initial="hidden" animate="visible" variants={{
+                    hidden: {
+                      scale: .5,
+                      opacity: 0
+                    },
+                    visible: {
+                      scale: [1, 2, 2, 1, 1],
+                      rotate: [0, 0, 270, 270, 0],
+                      opacity: 1,
+                      transition: {
+                        delay: .4
+                      }
+                    }
+                  }}>
+                    <h1 className="text-white font-semibold text-5xl">
+                      Adam Hunter
+                    </h1>
+                  </motion.div> */}
+
+
+                  <motion.div initial="hidden" animate="visible" variants={{
+                    hidden: {
+                      scale: .5,
+                      opacity: 0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1,
+                      transition: {
+                        delay: .2,
+                        type: 'tween',
+                        duration: 2
+                      }
+                    }
+                  }}>
                   <h2 className="mt-4 text-2xl text-gray-500">
                     full-stack developer
                   </h2>
+                  </motion.div>
                   {/* <img
                       className="w-60"
                       src="/images/adamlaptop.png"
@@ -68,7 +120,22 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
 
-              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+            <motion.div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"  initial="hidden" animate="visible" variants={{
+                    hidden: {
+                      scale: .5,
+                      opacity: 0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1,
+                      transition: {
+                        delay: .6,
+                        type: 'tween',
+                        duration: 1
+                      }
+                    }
+                  }}>
+              {/* <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"> */}
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white/80 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-indigo-400">
@@ -82,9 +149,27 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
+              </motion.div>
+              
 
-              <div className="w-full md:w-4/12 px-4 text-center">
+
+              <motion.div className="w-full md:w-4/12 px-4 text-center" initial="hidden" animate="visible" variants={{
+                    hidden: {
+                      scale: .5,
+                      opacity: 0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1,
+                      transition: {
+                        delay: .7,
+                        type: 'tween',
+                        duration: 1
+                      }
+                    }
+                  }}>
+              {/* <div className="w-full md:w-4/12 px-4 text-center"> */}
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-indigo-400">
@@ -98,9 +183,26 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
+              </motion.div>
+              
 
-              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <motion.div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" initial="hidden" animate="visible" variants={{
+                    hidden: {
+                      scale: .5,
+                      opacity: 0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1,
+                      transition: {
+                        delay: .8,
+                        type: 'tween',
+                        duration: 1
+                      }
+                    }
+                  }}>
+              {/* <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"> */}
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-indigo-400">
@@ -114,7 +216,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
+              </motion.div>
 
 
               <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -135,7 +238,10 @@ export default function Home() {
                             {/* <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                               <img className="object-cover bg-white/10 shadow-lg rounded-full" src="/images/adamhi.png" alt="profile pic" />
                             </div> */}
+
+                         
                             <img className="object-cover w-44 lg:w-96 bg-white/10 shadow-lg rounded-full" src="/images/adamhi.png" alt="profile pic" />
+                            
                             <div className="sm:col-span-2">
                               <div className="space-y-4">
                                 <div className="text-2xl text-white leading-6 font-medium space-y-1">
@@ -186,21 +292,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* <div className="pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-indigo-400">
-
-                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faDumpsterFire}></FontAwesomeIcon>
-
-                    </div>
-                    <h6 className="text-xl font-semibold">Things are fine</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Be humble
-                    </p>
-                  </div>
-                </div>
-              </div> */}
 
             </div>
           </div>
