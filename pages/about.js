@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/Head'
 import Link from 'next/link'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGitHub  } from "@fortawesome/free-solid-svg-icons"
 
@@ -77,6 +78,7 @@ import { faGitHub  } from "@fortawesome/free-solid-svg-icons"
             </div>
           </div>
         </div>
+        
       </div>
     )
   }

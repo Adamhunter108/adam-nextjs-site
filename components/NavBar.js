@@ -5,7 +5,7 @@ import Link from 'next/link'
 import WeatherFlyOut from './WeatherFlyOut'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHouseChimney, faBook, faEllipsisVertical, faAddressCard  } from "@fortawesome/free-solid-svg-icons"
+import { faHouseChimney, faBook, faEllipsisVertical, faAddressCard, faLaptopCode  } from "@fortawesome/free-solid-svg-icons"
 
 
 function classNames(...classes) {
@@ -50,21 +50,21 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    {/* <Link href="/about">
-                        <button
-                        type="button"
-                        className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            <a>About</a>
-                        </button>
-                    </Link> */}
-
                     <Link href="/blog">
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >
                             <a>Blog</a>
+                        </button>
+                    </Link>
+
+                    <Link href="/projects">
+                        <button
+                        type="button"
+                        className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >
+                            <a>Projects</a>
                         </button>
                     </Link>
 
@@ -135,6 +135,15 @@ export default function NavBar() {
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
+                    </Disclosure.Button>
+                </Link>
+
+                <Link href="/projects">
+                    <Disclosure.Button
+                    type="button"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    >
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
                     </Disclosure.Button>
                 </Link>
 
