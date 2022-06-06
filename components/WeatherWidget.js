@@ -28,17 +28,17 @@ export default function WeatherWidget() {
     }
 
   return (
-    <div className="p-6 w-96 h-40 backdrop-blur-md bg-gradient-to-r from-cyan-500/90 to-blue-500/90 rounded-full border-b border-t border-gray-200">
+    <div className="p-2 w-80 h-32 backdrop-blur-md bg-gradient-to-r from-cyan-500/90 to-blue-500/90 rounded-full border-b border-t border-gray-200">
         <div className="flex flex-row">
-            <div className="text-white p-3 text-center inline-flex items-center justify-center shadow-lg rounded-full bg-sky-200">
-                <img src={weatherData.icon} alt='icon' width="105"/>
+            <div className="text-white p-3 text-center inline-flex items-center justify-center shadow-lg rounded-full bg-gradient-to-t from-sky-200 to bg-cyan-400">
+                <img src={weatherData.icon} alt='icon' width="125"/>
             </div>
             <div className="flex flex-col">
-                <div className="text-lg text-bold pl-10 text-white">
-                    <p><FontAwesomeIcon style={{fontSize:"25px"}} icon={faTemperatureHalf} /> {temp}<span>&#176;</span>F</p>
+                <div className="text-2xl pt-1 text-bold pl-8 text-white">
+                    <p><FontAwesomeIcon style={{fontSize:"28px"}} icon={faTemperatureHalf} /> {temp}<span>&#176;</span>F</p>
                     <p>{weatherData.text}</p>
                 </div>
-                <div className="text-xs text-center pl-12 pt-1">
+                <div className="text-xs text-center pt-1 pl-1 pr-2">
                     <FontAwesomeIcon style={{fontSize:"20px"}} icon={faMapLocationDot} /> Weather location is based on your IP address
                 </div>
             </div>

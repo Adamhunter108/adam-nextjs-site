@@ -44,27 +44,27 @@ export default function NavBar() {
                     <Link href="/">
                         <button
                         type="button"
-                        className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
                         >
                         <a>Home</a>
-                        </button>
-                    </Link>
-
-                    <Link href="/blog">
-                        <button
-                        type="button"
-                        className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            <a>Blog</a>
                         </button>
                     </Link>
 
                     <Link href="/projects">
                         <button
                         type="button"
-                        className="text-gray-300 hover:bg-gray-700/70 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
                         >
                             <a>Projects</a>
+                        </button>
+                    </Link>
+
+                    <Link href="/blog">
+                        <button
+                        type="button"
+                        className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
+                        >
+                            <a>Blog</a>
                         </button>
                     </Link>
 
@@ -129,15 +129,6 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link> */}
 
-                <Link href="/blog">
-                    <Disclosure.Button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
-                    </Disclosure.Button>
-                </Link>
-
                 <Link href="/projects">
                     <Disclosure.Button
                     type="button"
@@ -147,11 +138,20 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link>
 
+                <Link href="/blog">
+                    <Disclosure.Button
+                    type="button"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    >
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
+                    </Disclosure.Button>
+                </Link>
+
             </div>
 
             <div className="pt-4 pb-3 border-t border-white/70">
 
-              <div className="pr-5 pt-1">
+              <div className="pl-3">
                 <WeatherFlyOut />
               </div>
             </div>

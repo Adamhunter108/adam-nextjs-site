@@ -21,20 +21,17 @@ export default function Home() {
 
       <main>
 
-        {/* <h1 className="pl-5 pt-20 text-4xl text-semibold">Home</h1> */}
-        
-
-        <div className="relative pt-32 pb-32 flex content-center items-center justify-center min-h-screen-75">
+        <div className="relative pt-32 pb-36 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover bg-fixed"
             style={{
               backgroundImage:
-                "url('/images/blurry-gradient.png')",
+                "url('/images/stacked-waves-haikei.svg')",
             }}
           >
             <span
               id="blackOverlay"
-              className="w-full h-full absolute opacity-75 bg-black"
+              className="w-full h-full absolute opacity-70 bg-black"
             ></span>
           </div>
 
@@ -62,6 +59,8 @@ export default function Home() {
                       Adam Hunter
                     </h1>
                   </motion.div>
+
+                  {/* some other cool stuff you can do like place with scale and rotation */}
                   {/* <motion.div initial="hidden" animate="visible" variants={{
                     hidden: {
                       scale: .5,
@@ -82,6 +81,15 @@ export default function Home() {
                   </motion.div> */}
 
 
+                    <Image
+                      className="h-48 w-full object-cover"
+                      src="/images/adamlaptop.png"
+                      width={220}
+                      height={220}
+                      alt="adam laptop"
+                    />
+
+
                   <motion.div initial="hidden" animate="visible" variants={{
                     hidden: {
                       scale: .5,
@@ -97,15 +105,12 @@ export default function Home() {
                       }
                     }
                   }}>
-                  <h2 className="mt-4 text-2xl text-gray-500">
+                  {/* <h2 className="mt-4 text-2xl text-gray-500"> */}
+                  <h2 className="text-2xl text-gray-400">
                     full-stack developer
                   </h2>
                   </motion.div>
-                  {/* <img
-                      className="w-60"
-                      src="/images/adamlaptop.png"
-                      alt=""
-                    /> */}
+
                 </div>
               </div>
             </div>

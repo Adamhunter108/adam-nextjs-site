@@ -64,11 +64,11 @@ export default function WeatherFlyOut() {
           <Transition
             as={Fragment}
             enter="transition ease-in duration-300"
-            enterFrom="opacity-0 translate-y-1"
+            enterFrom="opacity-0 translate-y-5"
             enterTo="opacity-100 translate-y-0"
             leave="transition ease-in duration-150"
             leaveFrom="opacity-100 translate-y-0"
-            leaveTo="opacity-0 translate-y-1"
+            leaveTo="opacity-0 translate-y-5"
           >
             <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-1 w-screen">
 
