@@ -113,7 +113,7 @@ export default function NavBar() {
                     {/* <HomeIcon className="h-6 w-6 text-white" aria-hidden="true" />  */}
                     <Disclosure.Button
                     type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 justify-center rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 justify-center rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
                     </Disclosure.Button>
@@ -132,7 +132,7 @@ export default function NavBar() {
                 <Link href="/projects">
                     <Disclosure.Button
                     type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
                     </Disclosure.Button>
@@ -141,7 +141,7 @@ export default function NavBar() {
                 <Link href="/blog">
                     <Disclosure.Button
                     type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
                     </Disclosure.Button>

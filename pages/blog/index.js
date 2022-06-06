@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+// import React, { useState, useEffect } from 'react'
+import React from 'react'
 import axios from 'axios'
 import Head from 'next/Head'
 import Link from 'next/link'
@@ -47,7 +48,7 @@ export default function Blog(props) {
     // }
 
 
-    // holy shit, this standard react method only works on the client side like a CRA app, meaning SEO is out the window... fuck...
+    // this standard react method only works on the client side like a CRA app, meaning SEO is out the window...
     // https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props
     // getServerSideProps() will be async function defined below main function
     // then the props from getServerSideProps() are passed as arg into main function
@@ -55,7 +56,7 @@ export default function Blog(props) {
 
     const posts = props.posts
 
-    console.log(posts)
+    // console.log(posts)
 
   return (
     <div>
