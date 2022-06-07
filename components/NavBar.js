@@ -5,7 +5,7 @@ import Link from 'next/link'
 import WeatherFlyOut from './WeatherFlyOut'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHouseChimney, faBook, faEllipsisVertical, faAddressCard, faLaptopCode  } from "@fortawesome/free-solid-svg-icons"
+import { faHouseChimney, faBook, faEllipsisVertical, faPaperPlane, faLaptopCode  } from "@fortawesome/free-solid-svg-icons"
 
 
 function classNames(...classes) {
@@ -65,6 +65,15 @@ export default function NavBar() {
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
                         >
                             <a>Blog</a>
+                        </button>
+                    </Link>
+
+                    <Link href="/contact">
+                        <button
+                        type="button"
+                        className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
+                        >
+                            <a>Contact</a>
                         </button>
                     </Link>
 
@@ -144,6 +153,15 @@ export default function NavBar() {
                     className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
+                    </Disclosure.Button>
+                </Link>
+
+                <Link href="/contact">
+                    <Disclosure.Button
+                    type="button"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
+                    >
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> <a>Contact</a>
                     </Disclosure.Button>
                 </Link>
 

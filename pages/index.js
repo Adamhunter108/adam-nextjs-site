@@ -233,7 +233,7 @@ export default function Home() {
                   <div className="space-y-5 sm:space-y-4">
                     {/* <h2 className="text-3xl pt-10 md:pt-20 lg:pt-20 text-white font-extrabold tracking-tight sm:text-2xl">About</h2> */}
                     <p className="text-xl text-white">
-                    Adam is a full-stack developer specializing in Python and JavaScript with a heavy emphasis on React. 
+                    Adam is a full-stack developer specializing in Python and JavaScript with an emphasis on React. 
                     </p>
                     <img className="object-cover w-44 lg:w-82 bg-white/10 shadow-lg rounded-full" src="/images/adamhi.png" alt="profile pic" />
                   </div>
