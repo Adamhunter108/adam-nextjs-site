@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import WeatherFlyOut from './WeatherFlyOut'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHeart, faHouse, faXmark, faBars, faBarsStaggered, faBook, faLaptopCode } from "@fortawesome/free-solid-svg-icons"
+import { faHeart, faHouse, faXmark, faBars, faBarsStaggered, faBook, faLaptopCode, faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 
 
 export default function SideBar() {
@@ -62,14 +61,16 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                {/* <Link href="/about">
+                <div className="border-t border-white/40" />
+
+                <Link href="/projects">
                     <button
                     type="button"
-                    className="text-gray-300 hover:bg-gray-700/40 hover:text-white block px-3 py-4 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faCircleQuestion} /> About
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> Projects
                     </button>
-                </Link> */}
+                </Link>
 
                 <div className="border-t border-white/40" />
 
@@ -84,18 +85,14 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/projects">
+                <Link href="/contact">
                     <button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
                     >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> Projects
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> Contact
                     </button>
                 </Link>
-
-
-
-                {/* <WeatherFlyOut /> */}
 
                 <div className="border-t border-white/40" />
 
