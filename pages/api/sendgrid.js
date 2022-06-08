@@ -10,7 +10,7 @@ export default async function sendEmail(req, res) {
       from: "hello@adamhunter.website",
       subject: `${req.body.subject}`,
       html: `<div>
-      <h3>You've got mail from ${req.body.fullname}, their email is ${req.body.email} </h3>
+      <h3>${req.body.fullname}, ${req.body.email}, just sent a message from the contact form on your website.</h3>
       <p>Message:</p>
       <p>${req.body.message}</p>
       </div>`,

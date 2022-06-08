@@ -25,8 +25,8 @@ export default function Projects() {
                 </div> */}
                 <div className="relative max-w-7xl mx-auto">
                     <div className="text-center">
-                        <h1 className="text-3xl tracking-tight font-extrabold text-indigo-600 sm:text-4xl">projects</h1>
-                        <h2 className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                        <h1 className="text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-indigo-600 to-teal-400 sm:text-4xl">projects</h1>
+                        <h2 className="mt-3 max-w-2xl mx-auto text-xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200 sm:mt-4">
                         some examples of my work
                         </h2>
                     </div>
@@ -273,7 +273,7 @@ export default function Projects() {
                                 <a  target="_blank" className="block mt-2">
                                 <p className="text-xl font-semibold text-gray-900 hover:text-gray-500">Web Development</p>
                                 <p className="mt-3 text-base text-gray-500 hover:text-indigo-600">adamhunter.website</p>
-                                <p className="mt-3 text-base text-gray-500">This website: A personal portfolio/blog built with Next.js and styled with Tailwind CSS. The site features SEO, accessibility and image optimization, static site generation, dynamic routing, API consumption from a headless CMS, custom built React components, animations and a fully responsive design.</p>
+                                <p className="mt-3 text-base text-gray-500">This website: A personal portfolio/blog built with Next.js and styled with Tailwind CSS. The site features SEO, accessibility and image optimization, static site generation, dynamic routing, API consumption from a headless CMS, SendGrid email API integration, custom built React components, animations and a fully responsive design.</p>
                                 </a>
                                 </Link>
                             </div>

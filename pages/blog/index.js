@@ -87,8 +87,8 @@ export default function Blog(props) {
                 </div> */}
                 <div className="relative max-w-7xl mx-auto">
                     <div className="text-center">
-                        <h1 className="text-3xl tracking-tight font-extrabold text-indigo-600 sm:text-4xl">blog</h1>
-                        <h2 className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                        <h1 className="text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-indigo-600 to-teal-400 sm:text-4xl">blog</h1>
+                        <h2 className="mt-3 max-w-2xl mx-auto text-xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200 sm:mt-4">
                         writings and musings
                         </h2>
                     </div>

@@ -55,7 +55,7 @@ export default function Home() {
                       }
                     }
                   }}>
-                    <h1 className="text-white font-semibold text-5xl">
+                    <h1 className="tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-indigo-200 to-teal-200 text-5xl">
                       Adam Hunter
                     </h1>
                   </motion.div>
@@ -90,7 +90,7 @@ export default function Home() {
                     />
 
 
-                  {/* <motion.div initial="hidden" animate="visible" variants={{
+                  <motion.div initial="hidden" animate="visible" variants={{
                     hidden: {
                       scale: .5,
                       opacity: 0
@@ -105,10 +105,10 @@ export default function Home() {
                       }
                     }
                   }}>
-                  <h2 className="text-2xl text-gray-400">
+                  <h2 className="text-2xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200">
                     full-stack developer
                   </h2>
-                  </motion.div> */}
+                  </motion.div>
 
                 </div>
               </div>
@@ -125,7 +125,8 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
 
-            <motion.div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"  initial="hidden" animate="visible" variants={{
+
+            <motion.div className="pt-6 w-full md:w-4/12 px-4 text-center"  initial="hidden" animate="visible" variants={{
                     hidden: {
                       scale: .5,
                       opacity: 0
@@ -140,7 +141,6 @@ export default function Home() {
                       }
                     }
                   }}>
-              {/* <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"> */}
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white/80 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-indigo-400">
@@ -148,18 +148,17 @@ export default function Home() {
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} />
 
                     </div>
-                    <h6 className="text-xl font-semibold">Full-Stack Developer</h6>
-                    {/* <p className="mt-2 mb-4 text-blueGray-500">
-                      Can code pretty good
-                    </p> */}
+                    <h6 className="text-xl font-semibold">What should</h6>
+                    <p className="mt-2 mb-4 text-blueGray-500">
+                      this box say?!
+                    </p>
                   </div>
                 </div>
-              {/* </div> */}
               </motion.div>
               
 
 
-              <motion.div className="w-full md:w-4/12 px-4 text-center" initial="hidden" animate="visible" variants={{
+              <motion.div className="lg:pt-14 w-full md:w-4/12 px-4 text-center" initial="hidden" animate="visible" variants={{
                     hidden: {
                       scale: .5,
                       opacity: 0
@@ -174,7 +173,6 @@ export default function Home() {
                       }
                     }
                   }}>
-              {/* <div className="w-full md:w-4/12 px-4 text-center"> */}
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-indigo-400">
@@ -186,15 +184,14 @@ export default function Home() {
                     </div>
                     <h6 className="text-xl font-semibold">Frontend</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                    
+                      Where creativity
                     </p>
                   </div>
                 </div>
-              {/* </div> */}
               </motion.div>
               
 
-              <motion.div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" initial="hidden" animate="visible" variants={{
+              <motion.div className="lg:pt-24 pt-6 w-full md:w-4/12 px-4 text-center" initial="hidden" animate="visible" variants={{
                     hidden: {
                       scale: .5,
                       opacity: 0
@@ -209,7 +206,6 @@ export default function Home() {
                       }
                     }
                   }}>
-              {/* <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"> */}
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-indigo-400">
@@ -219,12 +215,11 @@ export default function Home() {
 
                     </div>
                     <h6 className="text-xl font-semibold">Backend</h6>
-                    {/* <p className="mt-2 mb-4 text-blueGray-500">
-                    I'm a little lower
-                    </p> */}
+                    <p className="mt-2 mb-4 text-blueGray-500">
+                    converges with engineering.
+                    </p>
                   </div>
                 </div>
-              {/* </div> */}
               </motion.div>
 
 
@@ -232,8 +227,8 @@ export default function Home() {
                 <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                   <div className="space-y-5 sm:space-y-4">
                     {/* <h2 className="text-3xl pt-10 md:pt-20 lg:pt-20 text-white font-extrabold tracking-tight sm:text-2xl">About</h2> */}
-                    <p className="text-xl text-white">
-                    Adam is a full-stack developer specializing in Python and JavaScript with an emphasis on React. 
+                    <p className="text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-teal-400 sm:text-4xl">
+                    Hi, I'm Adam, a developer from New York City. I love using cutting edge technologies to bring ideas to life.
                     </p>
                     <img className="object-cover w-44 lg:w-82 bg-white/10 shadow-lg rounded-full" src="/images/adamhi.png" alt="profile pic" />
                   </div>
