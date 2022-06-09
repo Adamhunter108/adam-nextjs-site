@@ -81,9 +81,9 @@ export default function NavBar() {
                 </div>
               </div>
 
-              <div className="hidden sm:ml-6 sm:block">
+              {/* <div className="hidden sm:ml-6 sm:block">
                 <WeatherFlyOut />
-              </div>
+              </div> */}
 
               <div className="-mr-2 flex sm:hidden">
 
@@ -169,9 +169,9 @@ export default function NavBar() {
 
             <div className="pt-4 pb-3 border-t border-white/70">
 
-              <div className="pl-3">
+              {/* <div className="pl-3">
                 <WeatherFlyOut />
-              </div>
+              </div> */}
             </div>
           </Disclosure.Panel>
           </Transition>

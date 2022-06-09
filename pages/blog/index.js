@@ -109,7 +109,7 @@ export default function Blog(props) {
                         scale: 1,
                         opacity: 1,
                         transition: {
-                            delay: .5,
+                            delay: .2,
                             type: 'tween',
                             duration: 1
                         }
