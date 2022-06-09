@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react'
 import React from 'react'
 import axios from 'axios'
-import Head from 'next/Head'
+import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 // import SideBar from '../components/SideBar'
