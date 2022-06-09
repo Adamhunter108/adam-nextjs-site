@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <div>
         <Head>
-            <title>Adam's projects</title>
+            <title>Projects</title>
             <meta name="description" content="Descriptions and links to projects that Adam has worked on." />
             <link rel="icon" href="/adammindblown.ico" />
         </Head>

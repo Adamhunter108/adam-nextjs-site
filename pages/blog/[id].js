@@ -6,6 +6,7 @@ import SideBar from '../../components/SideBar'
 import Footer from '../../components/Footer'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {  faArrowLeftLong } from "@fortawesome/free-solid-svg-icons"
 import { motion } from "framer-motion"
@@ -89,7 +90,13 @@ export default function PostPage(props) {
                         {/* ADAM PROFILE PIC */}
                         <div className="flex-shrink-0 pl-40">
                             <span className="sr-only">Adam</span>
-                            <img className="h-20 w-20 rounded-full" src="/images/adamhi.png" alt="" />
+                            <Image
+                                className="h-20 w-20 rounded-full"
+                                src="/images/adamhi.png"
+                                width={75}
+                                height={75}
+                                alt="adam hi"
+                            />
                         </div>
                         <div className="ml-3">
                         <p className="text-sm font-medium text-gray-200">
@@ -111,15 +118,11 @@ export default function PostPage(props) {
 
                     </div>
 
-                    
-
                 </div>
 
             </main>
 
-            <footer>
-                <Footer />
-            </footer>
+            <Footer />
 
         </div>
     )

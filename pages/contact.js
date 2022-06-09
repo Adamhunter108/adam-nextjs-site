@@ -155,7 +155,16 @@ export default function Contact() {
                                 <h1 className="mx-auto pb-2 text-xl md:text-2xl lg:text-2xl font-bold text-black">
                                     Have an idea for a project?
                                 </h1>
-                                <img className="object-cover mx-auto w-44 lg:w-82 bg-gradient-to-t from-black to-indigo-400 shadow-lg rounded-full" src="/images/adamidea.png" alt="profile pic" />
+
+                                <div className="object-cover mx-auto bg-gradient-to-t from-black to-indigo-400 shadow-lg rounded-full">
+                                    <Image
+                                    className="object-cover mx-auto bg-gradient-to-t from-black to-indigo-400 shadow-lg rounded-full"
+                                    src="/images/adamidea.png"
+                                    width={150}
+                                    height={150}
+                                    alt="adam idea"
+                                    />
+                                </div>
 
                                 <label
                                     htmlFor="fullname" 

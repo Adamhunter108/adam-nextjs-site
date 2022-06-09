@@ -61,7 +61,7 @@ export default function Blog(props) {
   return (
     <div>
         <Head>
-            <title>Adam's Blog</title>
+            <title>Adam Hunter Blog</title>
             <meta name="description" content="This is probably going to be the new blog for Adam Hunter.  The blog is mostly about coding and programming technologies using both Python and JavaScript with a heavy emphasis on React.  This blog is a Next.js app powered by Strapi CMS, hosted on Heroku and uses a PostgreSQL database." />
             <link rel="icon" href="/adampensive.ico" />
         </Head>
@@ -147,7 +147,13 @@ export default function Blog(props) {
                                 {/* ADAM PROFILE PIC */}
                                 <div className="flex-shrink-0">
                                     <span className="sr-only">Adam</span>
-                                    <img className="h-20 w-20 rounded-full" src="/images/adampensive.png" alt="" />
+                                    <Image
+                                        className="h-20 w-20 rounded-full"
+                                        src="/images/adampensive.png"
+                                        width={75}
+                                        height={75}
+                                        alt="adam pensive"
+                                    />
                                 </div>
                                 <div className="ml-3">
                                 <p className="text-sm font-medium text-gray-900">

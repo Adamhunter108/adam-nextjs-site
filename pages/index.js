@@ -129,10 +129,16 @@ export default function Home() {
                     }
                   }}>
                     <p className="relative lg:-mt-16 text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-teal-400 sm:text-4xl">
-                    Hi, I'm Adam, a developer from New York City.  I love using cutting edge technologies to bring ideas to life.
+                    Hi, I&apos;m Adam, a developer from New York City.  I love using cutting edge technologies to bring ideas to life.
                     </p>
                     <div className="pt-5">
-                    <img className="object-cover w-44 lg:w-82 bg-white/10 shadow-lg rounded-full" src="/images/adamhi.png" alt="profile pic" />
+                      <Image
+                        className="object-cover w-44 lg:w-82 bg-white/10 shadow-lg rounded-full"
+                        src="/images/adamhi.png"
+                        width={175}
+                        height={175}
+                        alt="adam hi"
+                        />
                     </div>
                     </motion.div>
                   </div>
