@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Image from 'next/image'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTemperatureHalf, faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,6 +33,15 @@ export default function WeatherWidget() {
         <div className="flex flex-row">
             <div className="text-white p-3 text-center inline-flex items-center justify-center shadow-lg rounded-full bg-gradient-to-t from-sky-200 to bg-cyan-400">
                 <img src={weatherData.icon} alt='icon' width="125"/>
+
+                    {/* NOT SURE WHY SRC ISNT WORKING */}
+                {/* <Image
+                    className="text-white p-3 text-center inline-flex items-center justify-center shadow-lg rounded-full bg-gradient-to-t from-sky-200 to bg-cyan-400"
+                    src={weatherData.icon}
+                    width={100}
+                    height={100}
+                    alt='icon' 
+                /> */}
             </div>
             <div className="flex flex-col">
                 <div className="text-2xl pt-1 text-bold pl-8 text-white">
