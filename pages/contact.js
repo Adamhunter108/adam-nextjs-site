@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { motion } from "framer-motion"
 
-export default function contact() {
+export default function Contact() {
 
     const [fullname, setFullname] = useState("")
     const [email, setEmail] = useState("")
