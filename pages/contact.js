@@ -112,9 +112,9 @@ export default function contact() {
     return (
         <div>
             <Head>
-                <title>Contact</title>
+                <title>Contact Adam</title>
                 <meta name="description" content="If you missed the email social button in the footer, feel free to send me an email through the form on this page to get in contact." />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/adamidea.ico" />
             </Head>
 
             <NavBar />

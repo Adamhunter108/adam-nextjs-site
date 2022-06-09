@@ -33,7 +33,7 @@ export default function PostPage(props) {
             <Head>
                 <title>{post.Title}</title>
                 <meta name="description" content={post.Description} />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/adampensive.ico" />
             </Head>
 
             <SideBar />

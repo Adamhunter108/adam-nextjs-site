@@ -14,7 +14,7 @@ export default function Projects() {
         <Head>
             <title>Adam's projects</title>
             <meta name="description" content="Descriptions and links to projects that Adam has worked on." />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/adammindblown.ico" />
         </Head>
 
         <NavBar />

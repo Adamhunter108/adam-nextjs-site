@@ -61,9 +61,9 @@ export default function Blog(props) {
   return (
     <div>
         <Head>
-            <title>Adam Hunter's Blog</title>
+            <title>Adam's Blog</title>
             <meta name="description" content="This is probably going to be the new blog for Adam Hunter.  The blog is mostly about coding and programming technologies using both Python and JavaScript with a heavy emphasis on React.  This blog is a Next.js app powered by Strapi CMS, hosted on Heroku and uses a PostgreSQL database." />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/adampensive.ico" />
         </Head>
 
         {/* <SideBar /> */}
