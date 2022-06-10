@@ -41,7 +41,7 @@ export default function NavBar() {
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
 
                     {/* use a tag for semantic html for accessability and passHref prop for SEO  */}
-                    <Link href="/" passHref>
+                    <Link href="/" passHref={true}>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -50,7 +50,7 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    <Link href="/projects" passHref>
+                    <Link href="/projects" passHref={true}>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -59,7 +59,7 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    <Link href="/blog" passHref>
+                    <Link href="/blog" passHref={true}>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -68,7 +68,7 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    <Link href="/contact" passHref>
+                    <Link href="/contact" passHref={true}>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -117,7 +117,7 @@ export default function NavBar() {
             <div className="px-2 pt-2 pb-3 space-y-1">
 
                 {/* MOBILE LINKS */}
-              <Link href="/" passHref>
+              <Link href="/" passHref={true}>
                     <div className="flex flex-row">
                     {/* <HomeIcon className="h-6 w-6 text-white" aria-hidden="true" />  */}
                     <Disclosure.Button
@@ -138,7 +138,7 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link> */}
 
-                <Link href="/projects" passHref>
+                <Link href="/projects" passHref={true}>
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -147,7 +147,7 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link>
 
-                <Link href="/blog" passHref>
+                <Link href="/blog" passHref={true}>
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -156,7 +156,7 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link>
 
-                <Link href="/contact" passHref>
+                <Link href="/contact" passHref={true}>
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
