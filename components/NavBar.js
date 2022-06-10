@@ -40,8 +40,8 @@ export default function NavBar() {
                   <div className="flex space-x-4">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
 
-                    {/* use a tag still bc of html bc of seo/accessability  */}
-                    <Link href="/">
+                    {/* use a tag for semantic html for accessability and passHref prop for SEO  */}
+                    <Link href="/" passHref>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -50,7 +50,7 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    <Link href="/projects">
+                    <Link href="/projects" passHref>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -59,7 +59,7 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    <Link href="/blog">
+                    <Link href="/blog" passHref>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -68,7 +68,7 @@ export default function NavBar() {
                         </button>
                     </Link>
 
-                    <Link href="/contact">
+                    <Link href="/contact" passHref>
                         <button
                         type="button"
                         className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -117,7 +117,7 @@ export default function NavBar() {
             <div className="px-2 pt-2 pb-3 space-y-1">
 
                 {/* MOBILE LINKS */}
-              <Link href="/">
+              <Link href="/" passHref>
                     <div className="flex flex-row">
                     {/* <HomeIcon className="h-6 w-6 text-white" aria-hidden="true" />  */}
                     <Disclosure.Button
@@ -129,7 +129,7 @@ export default function NavBar() {
                     </div>
                 </Link>
 
-                {/* <Link href="/about">
+                {/* <Link href="/about" passHref>
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -138,7 +138,7 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link> */}
 
-                <Link href="/projects">
+                <Link href="/projects" passHref>
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -147,7 +147,7 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link>
 
-                <Link href="/blog">
+                <Link href="/blog" passHref>
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
@@ -156,7 +156,7 @@ export default function NavBar() {
                     </Disclosure.Button>
                 </Link>
 
-                <Link href="/contact">
+                <Link href="/contact" passHref>
                     <Disclosure.Button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"

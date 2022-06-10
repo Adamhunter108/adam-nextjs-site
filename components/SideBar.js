@@ -48,7 +48,7 @@ export default function SideBar() {
                 </h3>
 
                 
-                <Link href="/">
+                <Link href="/" passHref>
                     <div className="w-40">
                     <button
                     type="button"
@@ -63,7 +63,7 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/projects">
+                <Link href="/projects" passHref>
                     <button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
@@ -74,7 +74,7 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/blog">
+                <Link href="/blog" passHref>
                     <button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
@@ -85,7 +85,7 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/contact">
+                <Link href="/contact" passHref>
                     <button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
