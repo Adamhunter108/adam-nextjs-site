@@ -32,7 +32,7 @@ export default function Subscribe() {
             email: inputEl.current.value
         })
         .then(function(res) {
-            console.log(res)
+            console.log('Success!')
         })
         .catch(function(error){
             console.log('🚨 API error')
@@ -52,7 +52,7 @@ export default function Subscribe() {
             className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white">
 
             <h1 className="mx-auto pb-2 text-xl md:text-2xl lg:text-2xl font-bold text-black">
-                Sign up to stay in the loop?
+                Want to stay in the loop with a newsletter?
             </h1>
 
             <input
@@ -92,10 +92,10 @@ export default function Subscribe() {
                 </p>
                 )}
             </div> */}
-            <div className="pt-2">
+            <div className="text-sm mx-auto pt-2">
             {message
                 ? message
-                : `I'll only send emails when new content is posted. No spam.`}
+                : `I'll only send emails when new content is posted. Never spam and no selling of data.`}
             </div>
 
         </form>
