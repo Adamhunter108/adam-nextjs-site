@@ -1,19 +1,47 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react';
+import axios from 'axios';
 
 export default function Subscribe() {
 
-    const [email, setEmail] = useState('')
+    // create a reference to the input so we can fetch/clear it's value.
+    const inputEl = useRef(null);
+    const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
+
+            // CHANGED TO AXIOS
+        // const res = await fetch('/api/subscribe', {
+        //   body: JSON.stringify({
+        //     email: inputEl.current.value
+        //   }),
+        //   headers: {
+        //     'Content-Type': 'application/json'
+        //   },
+        //   method: 'POST'
+        // });
+
+        // const { error } = await res.json()
+        // if (error) {
+        //   setMessage(error)
     
-        try {
-          const response = await axios.post('/api/subscribe', { email })
-          console.log(response)
-          setEmail('')
-        } catch (e) {
-            console.log('🚨 no newsletter for you')
-        }
+        //   return;
+        // }
+
+        const res = await axios.post('api/subscribe', {
+            email: inputEl.current.value
+        })
+        .then(function(res) {
+            console.log(res)
+        })
+        .catch(function(error){
+            console.log('🚨 API error')
+            setMessage(error)
+        })
+    
+        // clear the input value and show a success message
+        inputEl.current.value = ''
+        setMessage('Success! 🎉 You are now subscribed to the newsletter.')
       }
 
   return (
@@ -27,20 +55,16 @@ export default function Subscribe() {
                 Sign up to stay in the loop?
             </h1>
 
-            {/* <label
-                htmlFor="email"
-                className="text-black font-light mt-4">
-                    E-mail<span className="text-red-500">*</span>
-            </label> */}
             <input
                 type="email"
                 name="email"
-                value={email}
+                // value={email}
+                ref={inputEl} 
                 placeholder="Your email address"
-                onChange={(e) => {
-                    setEmail(e.target.value)
-                }} 
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-indigo-500 font-light text-gray-800"
+                // onChange={(e) => {
+                //     setEmail(e.target.value)
+                // }}
+                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-2 ring-indigo-500 font-light text-gray-800"
             />
             {/* {errors?.email && (
                 <p className="text-red-500">You need an email to sign up</p>
@@ -68,6 +92,11 @@ export default function Subscribe() {
                 </p>
                 )}
             </div> */}
+            <div className="pt-2">
+            {message
+                ? message
+                : `I'll only send emails when new content is posted. No spam.`}
+            </div>
 
         </form>
 
