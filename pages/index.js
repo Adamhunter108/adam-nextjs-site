@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import Subscribe from '../components/Subscribe'
 import { motion } from "framer-motion"
 
 export default function Home() {
@@ -151,6 +152,9 @@ export default function Home() {
 
           </div>
             
+          <div className="mx-auto w-2/3 lg:w-1/2">
+            <Subscribe />
+          </div>
         </div>
 
       </main>
