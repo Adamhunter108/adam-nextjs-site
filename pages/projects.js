@@ -273,7 +273,7 @@ export default function Projects() {
                                 <a  target="_blank" className="block mt-2">
                                 <p className="text-xl font-semibold text-gray-900 hover:text-gray-500">Web Development</p>
                                 <p className="mt-3 text-base text-gray-500 hover:text-indigo-600">adamhunter.website</p>
-                                <p className="mt-3 text-base text-gray-500">This website: A personal portfolio/blog built with Next.js and styled with Tailwind CSS. The site features SEO, accessibility and image optimization, static site generation, dynamic routing, API consumption from a headless CMS, SendGrid email API integration, custom built React components, animations and a fully responsive design.</p>
+                                <p className="mt-3 text-base text-gray-500">This website: A personal portfolio/blog built with Next.js and styled with Tailwind CSS. The site features SEO, accessibility and image optimization, static site generation, dynamic routing, API consumption from a headless CMS, SendGrid email and MailChimp API integration, custom built React components, animations and a fully responsive design.</p>
                                 </a>
                                 </Link>
                             </div>

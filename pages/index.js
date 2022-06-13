@@ -152,7 +152,7 @@ export default function Home() {
 
           </div>
             
-          <div className="mx-auto w-2/3 lg:w-1/2">
+          <div className="mx-auto pb-10 px-5 md:px-12 lg:px-36">
             <Subscribe />
           </div>
         </div>

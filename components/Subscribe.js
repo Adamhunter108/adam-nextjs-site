@@ -49,11 +49,14 @@ export default function Subscribe() {
         <form
             method="post"
             onSubmit={handleSubmit} 
-            className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white">
+            className="rounded-lg shadow-xl flex flex-col py-8 bg-white">
 
             <h1 className="mx-auto pb-2 text-xl md:text-2xl lg:text-2xl font-bold text-black">
-                Want to stay in the loop with a newsletter?
+                Want to stay in the loop?
             </h1>
+            <h2 className="mx-auto pb-2 text-l font-bold text-gray-600">
+                Sign up for my newsletter
+            </h2>
 
             <input
                 type="email"
@@ -64,7 +67,7 @@ export default function Subscribe() {
                 // onChange={(e) => {
                 //     setEmail(e.target.value)
                 // }}
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-2 ring-indigo-500 font-light text-gray-800"
+                className="mx-auto w-4/5 bg-transparent border-b mt-4 py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-2 ring-indigo-500 font-light text-gray-800"
             />
             {/* {errors?.email && (
                 <p className="text-red-500">You need an email to sign up</p>
@@ -92,7 +95,7 @@ export default function Subscribe() {
                 </p>
                 )}
             </div> */}
-            <div className="text-sm mx-auto pt-2">
+            <div className="text-sm text-center mx-auto pt-2">
             {message
                 ? message
                 : `I'll only send emails when new content is posted. Never spam and no selling of data.`}
