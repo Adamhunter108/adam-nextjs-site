@@ -4,11 +4,32 @@ import axios from 'axios';
 export default function Subscribe() {
 
     // create a reference to the input so we can fetch/clear it's value.
-    const inputEl = useRef(null);
-    const [message, setMessage] = useState('');
+    const inputEl = useRef(null)
+
+        // NOT USING THIS ANYMORE
+    // const [message, setMessage] = useState('')
+
+    const [errors, setErrors] = useState({})
+
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+    const [showFailureMessage, setShowFailureMessage] = useState(false)
+
+    const handleValidation = () => {
+        let tempErrors = {}
+        let isValid = true
+
+        if (inputEl.length <= 0) {
+            tempErrors["inputEl"] = true
+            isValid = false
+        }
+
+        setErrors({...tempErrors})
+        console.log("errors", errors)
+        return isValid
+    }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
             // CHANGED TO AXIOS
         // const res = await fetch('/api/subscribe', {
@@ -28,20 +49,46 @@ export default function Subscribe() {
         //   return;
         // }
 
-        const res = await axios.post('api/subscribe', {
-            email: inputEl.current.value
-        })
-        .then(function(res) {
-            console.log('Success!')
-        })
-        .catch(function(error){
-            console.log('🚨 API error')
-            setMessage(error)
-        })
+        let isValidForm = handleValidation()
+
+        if (isValidForm) {
+
+            const res = await axios.post('api/subscribe', {
+                email: inputEl.current.value
+            })
+            .then(function(res) {
+                console.log('Success!')
+                setShowSuccessMessage(true)
+                setShowFailureMessage(false)
+            })
+            .catch(function(error){
+                console.log('🚨 API error')
+                // setMessage(error)
+                setShowSuccessMessage(false)
+                setShowFailureMessage(true)
+            })
+        
+            // clear the input value and show a success message
+            // inputEl.current.value = ''
+            // setMessage('Success! 🎉 You are now subscribed to the newsletter.')
+
+        }
+
+            // MOVED INSIDE OF VALIDATION
+        // const res = await axios.post('api/subscribe', {
+        //     email: inputEl.current.value
+        // })
+        // .then(function(res) {
+        //     console.log('Success!')
+        // })
+        // .catch(function(error){
+        //     console.log('🚨 API error')
+        //     setMessage(error)
+        // })
     
-        // clear the input value and show a success message
-        inputEl.current.value = ''
-        setMessage('Success! 🎉 You are now subscribed to the newsletter.')
+        // // clear the input value and show a success message
+        // inputEl.current.value = ''
+        // setMessage('Success! 🎉 You are now subscribed to the newsletter.')
       }
 
   return (
@@ -69,36 +116,36 @@ export default function Subscribe() {
                 // }}
                 className="mx-auto w-4/5 bg-transparent border-b mt-4 py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-2 ring-indigo-500 font-light text-gray-800"
             />
-            {/* {errors?.email && (
+            {/* {errors?.inputEl && (
                 <p className="text-red-500">You need an email to sign up</p>
             )} */}
 
             <div className="flex flex-row items-center justify-center">
                 <button
                     type="submit" 
-                    className="px-10 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-black font-light rounded-md text-lg flex flex-row items-center"
+                    className="px-10 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
                     >
                     Sign up
-                    {/* <svg width="24" height="24" className="text-white ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"/></svg> */}
+                        {/* CHEVRON RIGHT SVG ICON */}
+                    <svg width="24" height="24" className="text-white ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
                 </button>
             </div>
 
-            {/* <div className="">
+            <div className="text-sm text-center mx-auto pt-2">
+            {/* {message
+                ? message
+                : `I'll only send emails when new content is posted. Never spam and no selling of data.`} */}
+                <p>I&apos;ll only send emails when new content is posted. Never spam and no selling of data.</p>
                 {showSuccessMessage && (
-                <p className="text-green-500 font-semibold text-sm my-2">
-                    Thank you! Your Message has been delivered.
-                </p>
+                    <p className="text-green-500 font-semibold text-sm my-2">
+                        Thanks for signing up!
+                    </p>
                 )}
                 {showFailureMessage && (
-                <p className="text-red-500">
-                    Oops! Something went wrong, please try again.
-                </p>
+                    <p className="text-red-500">
+                        Something went wrong... did you forget to enter an email address? 
+                    </p>
                 )}
-            </div> */}
-            <div className="text-sm text-center mx-auto pt-2">
-            {message
-                ? message
-                : `I'll only send emails when new content is posted. Never spam and no selling of data.`}
             </div>
 
         </form>
