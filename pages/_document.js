@@ -7,6 +7,14 @@ export default function Document() {
             <meta charSet="utf-8" />
             {/* <link rel="icon" type="image/png" href="/images/favicon.png" /> */}
             <meta name="robots" content="index, follow" />
+
+            <meta property="og:site_name" content="Adam Hunter" key="ogsitename" />
+            <meta property="og:title" content="Adam Hunter" key="og:title" />
+            <meta property="og:description" content="Adam Hunter is a full stack developer software engineer specializing in python and javascript with an emphasis on react.  This is his next.js portfolio and blog." key="ogdesc" />
+            <meta property="og:url" content="https://www.adamhunter.website/" key="ogurl" />
+            <meta property="og:image" content="https://www.adamhunter.website/images/adamlaptop.png" key="ogimage" />
+            <meta property="og:type" content="website" />
+
         </Head>
         <body>
             <Main />
