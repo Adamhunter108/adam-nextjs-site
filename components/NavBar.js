@@ -35,7 +35,7 @@ export default function NavBar() {
                   <div className="flex space-x-4">
 
                     <Link href="/">
-                      <a className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium" target="_blank" rel="noopener noreferrer">
+                      <a className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
                         Home
                       </a>
                     </Link>
