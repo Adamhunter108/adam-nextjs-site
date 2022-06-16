@@ -15,6 +15,8 @@ export default function Document() {
             <meta property="og:image" content="https://www.adamhunter.website/images/adamlaptop.png" key="ogimage" />
             <meta property="og:type" content="website" />
 
+            <link rel="canonical" href="https://www.adamhunter.website/" />
+
         </Head>
         <body>
             <Main />

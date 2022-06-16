@@ -98,12 +98,12 @@ export default function Subscribe() {
             onSubmit={handleSubmit} 
             className="rounded-lg shadow-xl flex flex-col py-8 bg-white">
 
-            <h1 className="mx-auto pb-2 text-xl md:text-2xl lg:text-2xl font-bold text-black">
+            <h3 className="mx-auto pb-2 text-xl md:text-2xl lg:text-2xl font-bold text-black">
                 Want to stay in the loop?
-            </h1>
-            <h2 className="mx-auto pb-2 text-l font-bold text-gray-600">
+            </h3>
+            <h4 className="mx-auto pb-2 text-l font-bold text-gray-600">
                 Sign up for my newsletter
-            </h2>
+            </h4>
 
             <input
                 type="email"

@@ -1,16 +1,11 @@
-import { Fragment } from 'react'
+// import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon, HomeIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
-import WeatherFlyOut from './WeatherFlyOut'
-
+// import WeatherFlyOut from './WeatherFlyOut'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouseChimney, faBook, faEllipsisVertical, faPaperPlane, faLaptopCode  } from "@fortawesome/free-solid-svg-icons"
 
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function NavBar() {
   return (
@@ -38,44 +33,37 @@ export default function NavBar() {
                 {/* MAIN NAV LINKS */}
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
 
-                    {/* use a tag for semantic html for accessability and passHref prop for SEO  */}
-                    <Link href="/" passHref={true}>
-                        <button
-                        type="button"
-                        className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                        <a>Home</a>
-                        </button>
+                    <Link href="/">
+                      <a className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium" target="_blank" rel="noopener noreferrer">
+                        Home
+                      </a>
                     </Link>
 
-                    <Link href="/projects" passHref={true}>
-                        <button
-                        type="button"
-                        className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            <a>Projects</a>
-                        </button>
+                    <Link href="/projects">
+                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                        Projects
+                      </a>
                     </Link>
 
-                    <Link href="/blog" passHref={true}>
-                        <button
-                        type="button"
-                        className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            <a>Blog</a>
-                        </button>
+                    <Link href="/blog">
+                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                        Blog
+                      </a>
                     </Link>
 
-                    <Link href="/contact" passHref={true}>
-                        <button
-                        type="button"
-                        className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            <a>Contact</a>
-                        </button>
+                    <Link href="/contact">
+                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                        Contact
+                      </a>
                     </Link>
+
+                    {/* <Link href="/Adam_Hunter_resume.pdf" download>
+                        <a target="_blank" className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                          Download Resume
+                        </a>
+                          ADD A CHEVRON DOWN SVG HERE
+                    </Link> */}
 
                   </div>
                 </div>
@@ -117,53 +105,41 @@ export default function NavBar() {
             <div className="px-2 pt-2 pb-3 space-y-1">
 
                 {/* MOBILE LINKS */}
-              <Link href="/" passHref={true}>
-                    <div className="flex flex-row">
-                    {/* <HomeIcon className="h-6 w-6 text-white" aria-hidden="true" />  */}
-                    <Disclosure.Button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 justify-center rounded-md text-base font-medium"
-                    >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
-                    </Disclosure.Button>
-                    </div>
-                </Link>
+              <Link href="/">
+                  <div className="flex flex-row">
+                  <Disclosure.Button
+                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 justify-center rounded-md text-base font-medium"
+                  >
+                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
+                  </Disclosure.Button>
+                  </div>
+              </Link>
 
-                {/* <Link href="/about" passHref>
-                    <Disclosure.Button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faAddressCard} /> <a>About</a>
-                    </Disclosure.Button>
-                </Link> */}
+              <Link href="/projects">
+                  <div className="flex flex-row">
+                  <Disclosure.Button
+                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 justify-center rounded-md text-base font-medium"
+                  >
+                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
+                  </Disclosure.Button>
+                  </div>
+              </Link>
 
-                <Link href="/projects" passHref={true}>
-                    <Disclosure.Button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
-                    </Disclosure.Button>
-                </Link>
+              <Link href="/blog">
+                  <Disclosure.Button
+                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
+                  </Disclosure.Button>
+              </Link>
 
-                <Link href="/blog" passHref={true}>
-                    <Disclosure.Button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
-                    </Disclosure.Button>
-                </Link>
-
-                <Link href="/contact" passHref={true}>
-                    <Disclosure.Button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> <a>Contact</a>
-                    </Disclosure.Button>
-                </Link>
+              <Link href="/contact">
+                  <Disclosure.Button
+                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> <a>Contact</a>
+                  </Disclosure.Button>
+              </Link>
 
             </div>
 
