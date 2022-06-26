@@ -83,14 +83,30 @@ export default function Home() {
                       }
                     }
                   }}>
-                  <h2 className="text-2xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200">
+                  <h2 className="font-code text-2xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200">
                     full-stack developer
                   </h2>
                   </motion.div>
 
-                  <p className="pt-10 text-4xl md:text-5xl lg:text-5xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-teal-100 to-teal-400 sm:text-4xl">
-                   where creativity converges with engineering
-                  </p>
+                  <motion.div initial="hidden" animate="visible" variants={{
+                    hidden: {
+                      scale: .5,
+                      opacity: 0
+                    },
+                    visible: {
+                      scale: 1,
+                      opacity: 1,
+                      transition: {
+                        delay: .2,
+                        type: 'tween',
+                        duration: 2.5
+                      }
+                    }
+                  }}>
+                    <p className="pt-10 text-3xl md:text-5xl lg:text-5xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-teal-100 to-teal-400 sm:text-4xl">
+                    where creativity converges with engineering
+                    </p>
+                  </motion.div>
 
                 </div>
               </div>

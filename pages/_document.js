@@ -8,6 +8,7 @@ export default function Document() {
             {/* <link rel="icon" type="image/png" href="/images/favicon.png" /> */}
             <meta name="robots" content="index, follow" />
 
+            {/* OPEN GRAPH */}
             <meta property="og:site_name" content="Adam Hunter" key="ogsitename" />
             <meta property="og:title" content="Adam Hunter" key="og:title" />
             <meta property="og:description" content="Adam Hunter is a full stack developer software engineer specializing in python and javascript with an emphasis on react.  This is his next.js portfolio and blog." key="ogdesc" />
@@ -17,6 +18,8 @@ export default function Document() {
 
             <link rel="canonical" href="https://www.adamhunter.website/" />
 
+            {/* GOOGLE FONT CDN */}
+            <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
         </Head>
         <body>
             <Main />
