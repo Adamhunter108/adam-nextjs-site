@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
-
+import { motion } from "framer-motion"
 
 const socials = [
     {
@@ -63,10 +63,10 @@ const socials = [
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             {socials.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-indigo-400">
+              <motion.a whileHover={{ scale: 1.25 }} key={item.name} href={item.href} className="text-gray-400 hover:text-indigo-400">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
+              </motion.a>
             ))}
           </div>
           <div className="mt-8 md:mt-0 md:order-1">

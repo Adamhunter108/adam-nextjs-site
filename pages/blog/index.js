@@ -52,7 +52,6 @@ export default function Blog(props) {
     // https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props
     // getServerSideProps() will be async function defined below main function
     // then the props from getServerSideProps() are passed as arg into main function
-    // ok so no useState or useEffect... but that method is probably still good for testing
 
     const posts = props.posts
 
@@ -120,26 +119,32 @@ export default function Blog(props) {
                             <img className="h-48 w-full object-cover" src="/images/adammindblown.png" alt="" />
                         </div> */}
                         
-                        <div className="flex-shrink-0">
+                        <div className="flex-shrink-0 cursor-pointer">
                             {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.url} alt="" /> */}
                             {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.formats.small.url} alt="" /> */}
-                            <Image
-                                className="h-48 w-full object-cover"
-                                src={post.attributes.Header.data.attributes.url}
-                                width={600}
-                                height={300}
-                                // layout="fill"
-                                // placeholder="blur"
-                                alt="blog post header"
-                            />
+                            <motion.div whileHover={{ scale: 1.05 }}>
+                                <Link href={`/blog/${post.id}`}>
+                                    <Image
+                                        className="h-48 w-full object-cover"
+                                        src={post.attributes.Header.data.attributes.url}
+                                        width={600}
+                                        height={300}
+                                        // layout="fill"
+                                        // placeholder="blur"
+                                        alt="blog post header"
+                                    />
+                                </Link>
+                            </motion.div>
                         </div>
                         <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                             <div className="flex-1 cursor-pointer">
                                 <Link href={`/blog/${post.id}`}>
-                                <a href={post.href} className="block mt-2">
-                                <p className="text-xl font-semibold text-gray-900">{post.attributes.Title}</p>
-                                <p className="mt-3 text-base text-gray-500">{post.attributes.Description}</p>
-                                </a>
+                                    <a href={post.href} className="block mt-2">
+                                    <motion.div whileHover={{ scale: 1.05 }}>
+                                        <p className="text-xl font-semibold text-gray-900 hover:text-cyan-400">{post.attributes.Title}</p>
+                                    </motion.div>
+                                    <p className="mt-3 text-base text-gray-500">{post.attributes.Description}</p>
+                                    </a>
                                 </Link>
                             </div>
                             <div className="mt-6 flex items-center">
