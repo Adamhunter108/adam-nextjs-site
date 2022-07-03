@@ -30,7 +30,7 @@ export default function SideBar() {
                 // <rect y="30" width="100" height="10"></rect>
                 // <rect y="60" width="100" height="10"></rect>
                 // </svg>
-                <button onClick={() => setShowSidebar(!showSidebar)} className="fixed z-30 flex items-center cursor-pointer right-10 top-6">
+                <button onClick={() => setShowSidebar(!showSidebar)} className="fixed z-30 flex items-center cursor-pointer right-4 lg:right-20 top-6">
                     <FontAwesomeIcon className="text-indigo-500" style={{fontSize:"35px"}} icon={faBarsStaggered} />
                 </button>
             )}

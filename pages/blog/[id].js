@@ -37,8 +37,9 @@ export default function PostPage(props) {
                 <link rel="icon" href="/adampensive.ico" />
             </Head>
 
+            
             <SideBar />
-
+            
             <header>
 
                 <div className="relative py-32 lg:py-72 flex content-center items-center justify-center">
@@ -59,11 +60,11 @@ export default function PostPage(props) {
             </header>
 
             <main className="">
-                <div className="pt-2 lg:pt-5 pl-5">
+                <div className="pt-2 lg:pt-5 pl-2 lg:pl-6">
                     <Link href="/blog">
                         <button
                             type="button"
-                            className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-cyan-400/60 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="lg:fixed lg:z-50 px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
                         >
                             <FontAwesomeIcon style={{fontSize:"25px"}} icon={faArrowLeftLong} />{' '} <a>Back</a>
                         </button>
@@ -105,16 +106,16 @@ export default function PostPage(props) {
                         </div>
                     </div>
 
-                    <div className="pt-2 pb-5 lg:pl-5">
+                    <div className="lg:hidden pt-2 pb-5 lg:pl-5">
                             <Link href="/blog">
                                 <button
                                     type="button"
-                                    className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-cyan-400/60 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
                                 >
                                     <FontAwesomeIcon style={{fontSize:"25px"}} icon={faArrowLeftLong} />{' '} <a>Back</a>
                                 </button>
                             </Link>
-                        </div>
+                    </div>
 
                     </div>
 
