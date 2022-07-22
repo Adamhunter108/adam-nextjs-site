@@ -130,7 +130,8 @@ export default function Blog(props) {
                                         width={600}
                                         height={300}
                                         // layout="fill"
-                                        // placeholder="blur"
+                                        blurDataURL={post.attributes.Header.data.attributes.url}
+                                        placeholder="blur"
                                         alt="blog post header"
                                     />
                                 </Link>

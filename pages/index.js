@@ -65,6 +65,8 @@ export default function Home() {
                       width={220}
                       height={220}
                       alt="adam laptop"
+                      blurDataURL="/images/adamlaptop.png"
+                      placeholder="blur"
                     />
 
 
@@ -139,7 +141,7 @@ export default function Home() {
                       scale: 1,
                       opacity: 1,
                       transition: {
-                        delay: 2.5,
+                        delay: 2.25,
                         type: 'tween',
                         duration: 1
                       }
@@ -155,6 +157,8 @@ export default function Home() {
                         width={175}
                         height={175}
                         alt="adam hi"
+                        blurDataURL="/images/adamhi.png"
+                        placeholder="blur"
                         />
                     </div>
                     </motion.div>
