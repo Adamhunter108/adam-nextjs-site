@@ -1,16 +1,16 @@
 # adam-nextjs-site 👨‍💻
 
-### `About:` 
+### ℹ️ `About:` 
 A personal portfolio/blog built with Next.js and styled with Tailwind CSS. The site features SEO, accessibility and image optimization, static site generation, dynamic routing, API consumption from a headless CMS ([blog-backend-strapi](https://github.com/Adamhunter108/blog-backend-strapi)), SendGrid email and MailChimp API integration, custom built React components, animations and a fully responsive design.  The `main` branch of this git repository deploys to production automatically to Vercel for CI/CD.
 
-### `Tech Stack:`
+### 📚 `Tech Stack:`
 | JavaScript | Node.js | React | Next.js | Tailwind CSS | SendGrid | Vercel | MailChimp |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/sendgrid-1.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/vercel.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/mailchimp-freddie-icon-wink.svg" width="50" height="50"/> |
 
 
-### `Local Development:`
-#### `Requirements:`
+### 💻 `Local Development:`
+#### ❗️ `Requirements:`
 
 * Node.js <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="25" height="25"/> 
 * `.env.local` for environment variables
