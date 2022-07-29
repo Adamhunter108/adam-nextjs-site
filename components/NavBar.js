@@ -35,25 +35,25 @@ export default function NavBar() {
                   <div className="flex space-x-4">
 
                     <Link href="/">
-                      <a className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
                         Home
                       </a>
                     </Link>
 
                     <Link href="/projects">
-                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
                         Projects
                       </a>
                     </Link>
 
                     <Link href="/blog">
-                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
                         Blog
                       </a>
                     </Link>
 
                     <Link href="/contact">
-                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
                         Contact
                       </a>
                     </Link>
@@ -106,39 +106,35 @@ export default function NavBar() {
 
                 {/* MOBILE LINKS */}
               <Link href="/">
-                  <div className="flex flex-row">
-                  <Disclosure.Button
-                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 justify-center rounded-md text-base font-medium"
+                  <a
+                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
                   >
                       <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
-                  </Disclosure.Button>
-                  </div>
+                  </a>
               </Link>
 
               <Link href="/projects">
-                  <div className="flex flex-row">
-                  <Disclosure.Button
-                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 justify-center rounded-md text-base font-medium"
+                  <a
+                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
                   >
                       <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
-                  </Disclosure.Button>
-                  </div>
+                  </a>
               </Link>
 
               <Link href="/blog">
-                  <Disclosure.Button
-                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
+                  <a
+                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
                   >
                       <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
-                  </Disclosure.Button>
+                  </a>
               </Link>
 
               <Link href="/contact">
-                  <Disclosure.Button
-                  className="text-gray-300 hover:bg-gray-700 hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
+                  <a
+                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
                   >
                       <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> <a>Contact</a>
-                  </Disclosure.Button>
+                  </a>
               </Link>
 
             </div>
