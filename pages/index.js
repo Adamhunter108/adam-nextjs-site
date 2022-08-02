@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Subscribe from '../components/Subscribe'
 import { motion } from "framer-motion"
+import TypeAnimation from 'react-type-animation';
 
 export default function Home() {
   return (
@@ -73,21 +74,37 @@ export default function Home() {
                   <motion.div initial="hidden" animate="visible" variants={{
                     hidden: {
                       scale: .5,
-                      opacity: 0
+                      opacity: 1
                     },
                     visible: {
                       scale: 1,
                       opacity: 1,
                       transition: {
-                        delay: .2,
+                        delay: 0,
                         type: 'tween',
-                        duration: 2
+                        duration: 1
                       }
                     }
                   }}>
-                  <h2 className="font-code text-2xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200">
+                  {/* <div  className="font-code text-2xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200"> */}
+                  <div  className="font-code text-2xl text-gray-300">
+                    <TypeAnimation
+                      cursor={true}
+                      sequence={[
+                        // 'front-end developer',
+                        // 3000,
+                        // 'back-end developer',
+                        // 3000,
+                        'full-stack developer',
+                        // 3000,
+                      ]}
+                      wrapper="h2"
+                      repeat={1}
+                    />
+                  </div>
+                  {/* <h2 className="font-code text-2xl text-transparent bg-clip-text bg-gradient-to-t from-indigo-200 to-teal-200">
                     full-stack developer
-                  </h2>
+                  </h2> */}
                   </motion.div>
 
                   <motion.div initial="hidden" animate="visible" variants={{
