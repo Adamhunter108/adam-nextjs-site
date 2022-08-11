@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Subscribe from '../components/Subscribe'
 import { motion } from "framer-motion"
-import TypeAnimation from 'react-type-animation';
+import TypeAnimation from 'react-type-animation'
 
 export default function Home() {
   return (
