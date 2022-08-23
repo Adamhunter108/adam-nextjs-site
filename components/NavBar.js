@@ -1,6 +1,6 @@
 // import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon, HomeIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon, HomeIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 // import WeatherFlyOut from './WeatherFlyOut'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

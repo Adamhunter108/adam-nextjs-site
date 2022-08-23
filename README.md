@@ -19,9 +19,9 @@ A personal portfolio/blog built with Next.js and styled with Tailwind CSS. The s
 $ # install dependencies
 $ npm i
 $ # start local development node.js server
-$ npm run develop
+$ npm run dev
 $ # or
-$ yarn develop
+$ yarn dev
 ```
 
 
