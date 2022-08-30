@@ -214,6 +214,8 @@ export async function getStaticProps() {
         props: {
             posts: response.data.data
         },
+
+        revalidate: 60,
     }
 }
 
