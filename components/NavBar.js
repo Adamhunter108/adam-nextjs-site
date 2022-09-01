@@ -6,8 +6,13 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouseChimney, faBook, faEllipsisVertical, faPaperPlane, faLaptopCode  } from "@fortawesome/free-solid-svg-icons"
 
+import { useRouter } from 'next/router';
 
 export default function NavBar() {
+  const router = useRouter()
+  const currentRoute = router.asPath
+  // console.log(currentRoute)
+
   return (
     <Disclosure as="nav" className="fixed bg-black/70 backdrop-blur-lg w-screen z-40">
       {({ open }) => (
@@ -35,25 +40,25 @@ export default function NavBar() {
                   <div className="flex space-x-4">
 
                     <Link href="/">
-                      <a className="text-gray-300 hover:bg-gray-700/50 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className={`${currentRoute === "/" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/50 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Home
                       </a>
                     </Link>
 
                     <Link href="/projects">
-                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className={`${currentRoute === "/projects" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Projects
                       </a>
                     </Link>
 
                     <Link href="/blog">
-                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className={`${currentRoute === "/blog" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Blog
                       </a>
                     </Link>
 
                     <Link href="/contact">
-                      <a className="text-gray-300 hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium">
+                      <a className={`${currentRoute === "/contact" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Contact
                       </a>
                     </Link>
@@ -101,51 +106,51 @@ export default function NavBar() {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-          <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <Disclosure.Panel className="sm:hidden">
+              <div className="px-2 pt-2 pb-3 space-y-1">
 
-                {/* MOBILE LINKS */}
-              <Link href="/">
-                  <a
-                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
-                  >
-                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
-                  </a>
-              </Link>
+                  {/* MOBILE LINKS */}
+                <Link href="/">
+                    <a
+                    className={`${currentRoute === "/" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                    >
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
+                    </a>
+                </Link>
 
-              <Link href="/projects">
-                  <a
-                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
-                  >
-                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
-                  </a>
-              </Link>
+                <Link href="/projects">
+                    <a
+                    className={`${currentRoute === "/projects" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                    >
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
+                    </a>
+                </Link>
 
-              <Link href="/blog">
-                  <a
-                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
-                  >
-                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
-                  </a>
-              </Link>
+                <Link href="/blog">
+                    <a
+                    className={`${currentRoute === "/blog" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                    >
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
+                    </a>
+                </Link>
 
-              <Link href="/contact">
-                  <a
-                  className="text-gray-300 flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium"
-                  >
-                      <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> <a>Contact</a>
-                  </a>
-              </Link>
+                <Link href="/contact">
+                    <a
+                    className={`${currentRoute === "/contact" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                    >
+                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> <a>Contact</a>
+                    </a>
+                </Link>
 
-            </div>
+              </div>
 
-            <div className="pt-4 pb-3 border-t border-white/70">
+              <div className="pt-4 pb-3 border-t border-white/70">
 
-              {/* <div className="pl-3">
-                <WeatherFlyOut />
-              </div> */}
-            </div>
-          </Disclosure.Panel>
+                {/* <div className="pl-3">
+                  <WeatherFlyOut />
+                </div> */}
+              </div>
+            </Disclosure.Panel>
           </Transition>
           </div>
         </div>
