@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouseChimney, faBook, faEllipsisVertical, faPaperPlane, faLaptopCode  } from "@fortawesome/free-solid-svg-icons"
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 export default function NavBar() {
   const router = useRouter()
