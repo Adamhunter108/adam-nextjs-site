@@ -132,7 +132,8 @@ export default function PostPage(props) {
 
 // static site generation (or serverside) needs to get data before page loads
 export async function getStaticProps({params}) {
-    const API_URL = `https://adam-blog-backend-strapi.herokuapp.com/api/blogs/${params.id}?populate=*`
+    // const API_URL = `https://adam-blog-backend-strapi.herokuapp.com/api/blogs/${params.id}?populate=*`
+    const API_URL = `https://adam-blog-railway-strapi.up.railway.app/api/blogs/${params.id}?populate=*`
     const API_TOKEN = process.env.NEXT_PUBLIC_STRAPI_AUTH_TOKEN
     const response = await axios.get(API_URL, {
         headers: {
@@ -151,7 +152,8 @@ export async function getStaticProps({params}) {
 
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export async function getStaticPaths() {
-    const API_URL = "https://adam-blog-backend-strapi.herokuapp.com/api/blogs"
+    // const API_URL = "https://adam-blog-backend-strapi.herokuapp.com/api/blogs"
+    const API_URL = "https://adam-blog-railway-strapi.up.railway.app/api/blogs"
     const API_TOKEN = process.env.NEXT_PUBLIC_STRAPI_AUTH_TOKEN
     const response = await axios.get(API_URL, {
         headers: {
