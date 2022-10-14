@@ -1,7 +1,9 @@
 # adam-nextjs-site 👨‍💻
 
 ### ℹ️ `About:` 
-A personal portfolio and blog built with Next.js and styled with Tailwind CSS. The site features SEO, accessibility and image optimization, Google Analytics, incremental static site generation, dynamic routing, API consumption from a headless CMS ([github.com/Adamhunter108/strapi-railway](https://github.com/Adamhunter108/strapi-railway)), SendGrid email and MailChimp API integration, custom built React components, animations and a fully responsive design.  The `main` branch of this git repository deploys to production automatically to Vercel for CI/CD.
+A personal portfolio and blog built with `Next.js` and styled with `Tailwind CSS`.  
+
+The site features incremental static site generation, SEO, accessibility and image optimization, Google Analytics, dynamic routing, API consumption from a headless CMS ([github.com/Adamhunter108/strapi-railway](https://github.com/Adamhunter108/strapi-railway)), SendGrid email and MailChimp API integration, custom built React components, animations and a fully responsive design.  The `main` branch of this git repository deploys to production automatically to Vercel for CI/CD.
 
 ### 📚 `Tech Stack:`
 | JavaScript | Node.js | React | Next.js | Tailwind CSS |
