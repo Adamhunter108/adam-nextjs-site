@@ -164,7 +164,7 @@ export default function Home() {
                       }
                     }
                   }}>
-                    <p className="relative lg:-mt-16 text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-teal-400 sm:text-4xl">
+                    <p className="relative lg:-mt-16 text-4xl tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-teal-400 sm:text-4xl">
                     Hi, I&apos;m Adam, a developer from New York City.  I love using cutting edge technologies to bring ideas to life.
                     </p>
                     <div className="pt-5">
@@ -189,7 +189,7 @@ export default function Home() {
 
           </div>
             
-          <div className="mx-auto pb-10 px-5 md:px-12 lg:px-36">
+          <div className="mx-auto pb-10 px-5 md:px-12 lg:px-44">
             <Subscribe />
           </div>
         </div>
