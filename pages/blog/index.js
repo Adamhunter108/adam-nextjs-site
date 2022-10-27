@@ -205,8 +205,6 @@ export default function Blog(props) {
 
 // this does the same thing but will render and cache this page at build time instead of at browser request for faster load time
 export async function getStaticProps() {
-    // const API_URL = "https://adam-blog-backend-strapi.herokuapp.com/api/blogs"
-    // const API_URL = "https://adam-blog-backend-strapi.herokuapp.com/api/blogs?populate=*"
     const API_URL = "https://adam-blog-railway-strapi.up.railway.app/api/blogs?populate=*"
     const API_TOKEN = process.env.NEXT_PUBLIC_STRAPI_AUTH_TOKEN_RAILWAY
     const response = await axios.get(API_URL, {
