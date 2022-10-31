@@ -123,7 +123,7 @@ export default function Blog(props) {
                             {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.url} alt="" /> */}
                             {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.formats.small.url} alt="" /> */}
                             <motion.div whileHover={{ scale: 1.05 }}>
-                                <Link href={`/blog/${post.id}`}>
+                                <Link href={`/blog/${post.id}`} legacyBehavior>
                                     <a>
                                         <Image
                                             className="h-48 w-full object-cover"
@@ -142,7 +142,7 @@ export default function Blog(props) {
                         <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                             <div className="flex-1">
                                 <div className="cursor-pointer">
-                                    <Link href={`/blog/${post.id}`}>
+                                    <Link href={`/blog/${post.id}`} legacyBehavior>
                                         <a>
                                             <motion.div whileHover={{ scale: 1.05 }}>
                                                 <p className="text-xl font-semibold text-gray-900 hover:text-cyan-400">{post.attributes.Title}</p>

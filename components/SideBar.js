@@ -48,7 +48,7 @@ export default function SideBar() {
                 </h3>
 
                 
-                <Link href="/" passHref={true}>
+                <Link href="/" passHref={true} legacyBehavior>
                     <div className="w-40">
                     <button
                     type="button"
@@ -63,7 +63,7 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/projects" passHref={true}>
+                <Link href="/projects" passHref={true} legacyBehavior>
                     <button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
@@ -74,7 +74,7 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/blog" passHref={true}>
+                <Link href="/blog" passHref={true} legacyBehavior>
                     <button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
@@ -85,7 +85,7 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/contact" passHref={true}>
+                <Link href="/contact" passHref={true} legacyBehavior>
                     <button
                     type="button"
                     className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"

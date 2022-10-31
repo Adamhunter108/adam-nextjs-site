@@ -61,7 +61,7 @@ export default function PostPage(props) {
 
             <main className="">
                 <div className="pt-2 lg:pt-5 pl-2 lg:pl-6">
-                    <Link href="/blog">
+                    <Link href="/blog" legacyBehavior>
                         <button
                             type="button"
                             className="lg:fixed lg:z-50 px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
@@ -107,7 +107,7 @@ export default function PostPage(props) {
                     </div>
 
                     <div className="lg:hidden pt-2 pb-5 lg:pl-5">
-                            <Link href="/blog">
+                            <Link href="/blog" legacyBehavior>
                                 <button
                                     type="button"
                                     className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
