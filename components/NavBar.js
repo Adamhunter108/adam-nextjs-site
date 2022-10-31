@@ -39,28 +39,28 @@ export default function NavBar() {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
 
-                    <Link href="/" legacyBehavior>
-                      <a className={`${currentRoute === "/" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/50 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
+                    <Link href="/">
+                      <div className={`${currentRoute === "/" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/50 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Home
-                      </a>
+                      </div>
                     </Link>
 
-                    <Link href="/projects" legacyBehavior>
-                      <a className={`${currentRoute === "/projects" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
+                    <Link href="/projects">
+                      <div className={`${currentRoute === "/projects" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Projects
-                      </a>
+                      </div>
                     </Link>
 
-                    <Link href="/blog" legacyBehavior>
-                      <a className={`${currentRoute === "/blog" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
+                    <Link href="/blog">
+                      <div className={`${currentRoute === "/blog" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Blog
-                      </a>
+                      </div>
                     </Link>
 
-                    <Link href="/contact" legacyBehavior>
-                      <a className={`${currentRoute === "/contact" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
+                    <Link href="/contact">
+                      <div className={`${currentRoute === "/contact" ? "text-indigo-400 underline decoration-indigo-500" : "text-gray-300"} hover:bg-gray-700/70 hover:text-indigo-400 hover:underline decoration-indigo-500 block px-3 py-2 rounded-md text-base font-medium`}>
                         Contact
-                      </a>
+                      </div>
                     </Link>
 
                     {/* <Link href="/Adam_Hunter_resume.pdf" download>
@@ -110,36 +110,36 @@ export default function NavBar() {
               <div className="px-2 pt-2 pb-3 space-y-1">
 
                   {/* MOBILE LINKS */}
-                <Link href="/" legacyBehavior>
-                    <a
-                    className={`${currentRoute === "/" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                <Link href="/">
+                    <div
+                      className={`${currentRoute === "/" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouseChimney} /> <a>Home</a>
-                    </a>
+                    </div>
                 </Link>
 
-                <Link href="/projects" legacyBehavior>
-                    <a
-                    className={`${currentRoute === "/projects" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                <Link href="/projects">
+                    <div
+                      className={`${currentRoute === "/projects" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> <a>Projects</a>
-                    </a>
+                    </div>
                 </Link>
 
-                <Link href="/blog" legacyBehavior>
-                    <a
-                    className={`${currentRoute === "/blog" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                <Link href="/blog">
+                    <div
+                      className={`${currentRoute === "/blog" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> <a>Blog</a>
-                    </a>
+                    </div>
                 </Link>
 
-                <Link href="/contact" legacyBehavior>
-                    <a
-                    className={`${currentRoute === "/contact" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
+                <Link href="/contact">
+                    <div
+                      className={`${currentRoute === "/contact" ? "text-indigo-400" : "text-gray-300"} flex flex-row space-x-2 hover:bg-gray-700 hover:text-indigo-400 px-3 py-2 justify-center rounded-md text-base font-medium`}
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> <a>Contact</a>
-                    </a>
+                    </div>
                 </Link>
 
               </div>

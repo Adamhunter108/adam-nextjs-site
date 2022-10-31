@@ -58,17 +58,16 @@ export default function Home() {
                     </h1>
                   </motion.div>
 
-
-
-                    <Image
-                      className="h-48 w-full object-cover"
-                      src="/images/adamlaptop.png"
-                      width={220}
-                      height={220}
-                      alt="adam laptop"
-                      blurDataURL="/images/adamlaptop.png"
-                      placeholder="blur"
-                    />
+                    <div className="flex justify-center">
+                      <Image
+                        src="/images/adamlaptop.png"
+                        width={220}
+                        height={220}
+                        alt="adam laptop"
+                        blurDataURL="/images/adamlaptop.png"
+                        placeholder="blur"
+                      />
+                    </div>
 
 
                   <motion.div initial="hidden" animate="visible" variants={{

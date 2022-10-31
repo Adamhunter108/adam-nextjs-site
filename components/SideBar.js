@@ -31,7 +31,7 @@ export default function SideBar() {
                 // <rect y="60" width="100" height="10"></rect>
                 // </svg>
                 <button onClick={() => setShowSidebar(!showSidebar)} className="fixed z-30 flex items-center cursor-pointer right-4 lg:right-20 top-6">
-                    <FontAwesomeIcon className="text-indigo-500" style={{fontSize:"35px"}} icon={faBarsStaggered} />
+                    <FontAwesomeIcon className="text-indigo-500 hover:text-white" style={{fontSize:"35px"}} icon={faBarsStaggered} />
                 </button>
             )}
 
@@ -44,18 +44,18 @@ export default function SideBar() {
                     }`}
             >
                 <h3 className="mt-10 pb-5 text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-indigo-400 to-cyan-400 flex justify-center">
-                Adam Hunter
+                    Adam Hunter
                 </h3>
 
                 
-                <Link href="/" passHref={true} legacyBehavior>
+                <Link href="/">
                     <div className="w-40">
-                    <button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
-                    >
-                        <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouse} /> Home
-                    </button>
+                        <button
+                            type="button"
+                            className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
+                        >
+                            <FontAwesomeIcon style={{fontSize:"25px"}} icon={faHouse} /> Home
+                        </button>
                     </div>
                 </Link>
 
@@ -63,10 +63,10 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/projects" passHref={true} legacyBehavior>
+                <Link href="/projects">
                     <button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
+                        type="button"
+                        className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLaptopCode} /> Projects
                     </button>
@@ -74,10 +74,10 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/blog" passHref={true} legacyBehavior>
+                <Link href="/blog">
                     <button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
+                        type="button"
+                        className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faBook} /> Blog
                     </button>
@@ -85,10 +85,10 @@ export default function SideBar() {
 
                 <div className="border-t border-white/40" />
 
-                <Link href="/contact" passHref={true} legacyBehavior>
+                <Link href="/contact">
                     <button
-                    type="button"
-                    className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
+                        type="button"
+                        className="text-gray-300 hover:bg-gray-700/40 hover:text-indigo-500 block px-3 py-4 rounded-md text-base font-medium"
                     >
                         <FontAwesomeIcon style={{fontSize:"25px"}} icon={faPaperPlane} /> Contact
                     </button>
