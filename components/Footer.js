@@ -70,7 +70,7 @@ const socials = [
             ))}
           </div>
           <div className="mt-8 md:mt-0 md:order-1">
-            <p className="text-center text-base text-gray-400">&copy; 2022 Adam Hunter. All rights reserved.</p>
+            <p className="text-center text-base text-gray-400">&copy; {new Date().getFullYear()} Adam Hunter. All rights reserved.</p>
             <p className="text-center lg:text-left text-sm text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-teal-400">Made with <FontAwesomeIcon className="text-red-600" style={{fontSize:"15px"}} icon={faHeart} /> in NYC</p>
           </div>
         </div>
