@@ -15,7 +15,8 @@ import { motion } from "framer-motion"
 export default function PostPage(props) {
     const router = useRouter()
 
-    // const routerID = router.query.id
+    const routerID = router.query.id
+    // console.log(routerID)
 
     const post = props.post
 
@@ -122,6 +123,12 @@ export default function PostPage(props) {
                 </div>
 
             </main>
+
+            {/* 
+            /////////////////////////////////////////////////////////////
+            TODO: make previous and next blog post buttons with routerID
+            /////////////////////////////////////////////////////////////
+            */}
 
             <Footer />
 
