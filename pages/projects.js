@@ -247,7 +247,7 @@ export default function Projects() {
                         </div>
                     </motion.div>
 
-                    {/* WEB APP */}
+                    {/* PROGRESSIVE WEB APP */}
                     <motion.div className="flex flex-col rounded-xl shadow-lg overflow-hidden" initial="hidden" animate="visible" variants={{
                         hidden: {
                         scale: .5,
@@ -278,13 +278,13 @@ export default function Projects() {
                         </div>
                         <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                             <div className="flex-1">
-                                <p className="text-xl font-semibold text-gray-900">Web-App</p>
+                                <p className="text-xl font-semibold text-gray-900">Progressive Web-App</p>
                                 <Link href="https://bookofchanges.app/" legacyBehavior>
                                     <a  target="_blank" className="block mt-2">
                                         <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">bookofchanges.app</p>
                                     </a>
                                 </Link>
-                                <p className="mt-3 text-base text-gray-500">A web-app for getting a daily I Ching reading and sharing your results.</p>
+                                <p className="mt-3 text-base text-gray-500">A PWA (progressive web-app) for getting a daily I Ching reading and sharing your results.</p>
                                 <p className="mt-2 text-base text-gray-500">This is a Next.js web-app written in TypeScript, styled with Tailwind CSS and deployed continuously to Vercel via Git.</p>
                             </div>
                             <div className="pt-2 flex">
