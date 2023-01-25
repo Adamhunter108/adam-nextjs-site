@@ -53,10 +53,13 @@ export default function Blog(props) {
     // getServerSideProps() will be async function defined below main function
     // then the props from getServerSideProps() are passed as arg into main function
 
+    
     const posts = props.posts
 
-    console.log(posts)
-
+    const sortedPosts = posts.sort((a, b) => {
+        return new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt)
+    })
+      
   return (
     <div>
         <Head>
@@ -65,20 +68,7 @@ export default function Blog(props) {
             <link rel="icon" href="/adampensive.ico" />
         </Head>
 
-        {/* <SideBar /> */}
         <NavBar />
-        {/* <div className="pl-3 pt-20"> */}
-            {/* <h1 className="text-4xl">{blogData.Title}</h1>
-            <h2 className="text-3xl">{blogData.Description}</h2>
-            <p>{blogData.Body}</p> */}
-
-            {/* this works 😎 */}
-            {/* {posts.map((post) => (
-                <div key={post.id} className="">
-                    <h1 className='text-2xl'>{post.attributes.Title}</h1>
-                    <h2 className='text-xl'>{post.attributes.Description}</h2>
-                </div>
-                ))} */}
 
             <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pt-20 pb-20 px-4 sm:px-6 lg:pt-15 lg:pb-28 lg:px-8">
                 {/* <div className="absolute inset-0">
@@ -96,9 +86,10 @@ export default function Blog(props) {
                 <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
 
-                    {posts.slice(0).reverse().map((post) => (
+                    {/* {posts.slice(0).reverse().map((post) => ( */}
+                    {sortedPosts.map((post) => (
 
-
+                        
                     <motion.div key={post.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden" initial="hidden" animate="visible" variants={{
                         hidden: {
                         scale: .5,
