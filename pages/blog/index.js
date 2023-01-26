@@ -8,6 +8,8 @@ import Image from 'next/image'
 import NavBar from '../../components/NavBar'
 import Footer from '../../components/Footer'
 import { motion } from "framer-motion"
+import { Tab } from '@headlessui/react'
+import Tabs from '../../components/Tabs'
 
 export default function Blog(props) {
 
@@ -53,7 +55,7 @@ export default function Blog(props) {
     // getServerSideProps() will be async function defined below main function
     // then the props from getServerSideProps() are passed as arg into main function
 
-    
+
     const posts = props.posts
 
     const sortedPosts = posts.sort((a, b) => {
@@ -83,13 +85,37 @@ export default function Blog(props) {
                     </div>
 
                 
+                    <div className="flex items-center justify-center">
+
+                        {/* <div key={post.id}> */}
+                            <Tabs 
+                                title = "This is the first title"
+
+                            />
+                        {/* </div> */}
+
+                    </div>
+
+
                 <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
 
-                    {/* {posts.slice(0).reverse().map((post) => ( */}
-                    {sortedPosts.map((post) => (
+                {/* <Tab.Group>
+                    <Tab.List>
+                        <Tab>Tab 1</Tab>
+                        <Tab>Tab 2</Tab>
+                        <Tab>Tab 3</Tab>
+                    </Tab.List>
+                    <Tab.Panels>
+                        <Tab.Panel>Content 1</Tab.Panel>
+                        <Tab.Panel>Content 2</Tab.Panel>
+                        <Tab.Panel>Content 3</Tab.Panel>
+                    </Tab.Panels>
+                </Tab.Group> */}
 
-                        
+
+                    {/* {sortedPosts.map((post) => (
+ 
                     <motion.div key={post.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden" initial="hidden" animate="visible" variants={{
                         hidden: {
                         scale: .5,
@@ -105,14 +131,8 @@ export default function Blog(props) {
                         }
                         }
                     }}>
-                    {/* <div key={post.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden"> */}
-                        {/* <div className="flex-shrink-0">
-                            <img className="h-48 w-full object-cover" src="/images/adammindblown.png" alt="" />
-                        </div> */}
                         
                         <div className="flex-shrink-0 cursor-pointer">
-                            {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.url} alt="" /> */}
-                            {/* <img className="h-48 w-full object-cover" src={post.attributes.Header.data.attributes.formats.small.url} alt="" /> */}
                             <motion.div whileHover={{ scale: 1.05 }}>
                                 <Link href={`/blog/${post.id}`} legacyBehavior>
                                     <a>
@@ -145,7 +165,6 @@ export default function Blog(props) {
                             </div>
                             <div className="mt-6 flex items-center">
                                 
-                                {/* ADAM PROFILE PIC */}
                                 <div className="flex-shrink-0">
                                     <span className="sr-only">Adam</span>
                                     <Image
@@ -163,10 +182,9 @@ export default function Blog(props) {
                                 </div>
                             </div>
                         </div>
-                    {/* </div> */}
                     </motion.div>
+                    ))} */}
 
-                    ))}
                 </div>
                 
                 </div>
