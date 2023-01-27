@@ -20,9 +20,6 @@ export default function Projects() {
         <NavBar />
 
             <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pt-20 pb-20 px-4 sm:px-6 lg:pt-15 lg:pb-28 lg:px-8">
-                {/* <div className="absolute inset-0">
-                    <div className="bg-gradient-to-t from-cyan-900 via-indigo-900 to-black h-1/3 sm:h-2/3" />
-                </div> */}
                 <div className="relative max-w-7xl mx-auto">
                     <div className="text-center">
                         <h1 className="text-4xl tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-indigo-600 to-teal-400 sm:text-4xl">projects</h1>
@@ -32,9 +29,6 @@ export default function Projects() {
                     </div>
 
                 <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-
-
-
 
                         {/* WEB DEV */}
                         <motion.div className="flex flex-col rounded-xl shadow-lg overflow-hidden" initial="hidden" animate="visible" variants={{
@@ -78,7 +72,7 @@ export default function Projects() {
                                     This project is built with Next.js, styled with Tailwind CSS and features SEO, accessibility and image optimization, Google Analytics, serverless API integration, custom built React components, a fully responsive original design and deploys to production continuously to Vercel via Git.
                                 </p>
                                 <p className="mt-3 text-base text-gray-500">
-                                    The e-commerce portion of the website is a custom headless Shopify storefront built using the React framework, Hydrogen which is seamlessly integrated through a subdomain.
+                                    The e-commerce portion of the website is a custom headless Shopify storefront built using the React framework Hydrogen, which is seamlessly integrated through a subdomain.
                                 </p>
                             </div>
                             <div className="pt-2 flex">
@@ -104,6 +98,78 @@ export default function Projects() {
                                             <svg className="w-8 h-8" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
                                         </a>
                                     </Link>
+                                </motion.a>
+                            </div>
+                        </div>
+                    </motion.div>
+
+
+                    {/* PROGRESSIVE WEB APP */}
+                    <motion.div className="flex flex-col rounded-xl shadow-lg overflow-hidden" initial="hidden" animate="visible" variants={{
+                        hidden: {
+                        scale: .5,
+                        opacity: 0
+                        },
+                        visible: {
+                        scale: 1,
+                        opacity: 1,
+                        transition: {
+                            delay: .3,
+                            type: 'tween',
+                            duration: 1
+                        }
+                        }
+                    }}>
+                        <div className="flex-shrink-0">
+                            <motion.div whileHover={{ scale: 1.05 }}>
+                                <Image
+                                    className="h-48 w-full object-cover"
+                                    src="/images/i-ching-ts.gif"
+                                    width={600}
+                                    height={300}
+                                    alt="I Ching"
+                                    // blurDataURL="/images/iching.gif"
+                                    // placeholder="blur"
+                                />
+                            </motion.div> 
+                        </div>
+                        <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
+                            <div className="flex-1">
+                                <p className="text-xl font-semibold text-gray-900">Progressive Web-App</p>
+                                <Link href="https://bookofchanges.app/" legacyBehavior>
+                                    <a  target="_blank" className="block mt-2">
+                                        <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">bookofchanges.app</p>
+                                    </a>
+                                </Link>
+                                <p className="mt-3 text-base text-gray-500">A PWA (progressive web-app) for getting a daily I Ching reading and sharing your results.</p>
+                                <p className="mt-2 text-base text-gray-500">This is a Next.js progressive web-app written in TypeScript, styled with Tailwind CSS and deployed continuously to Vercel via Git.</p>
+                                <p className="mt-2 text-base text-gray-500">This app can be installed on any desktop or mobile device via a browser and will work offline.  For instructions on how to install a PWA, please see the <a target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-cyan-300" href='https://github.com/Adamhunter108/i-ching-typescript#%E2%84%B9%EF%B8%8F-about'>README</a>.</p>
+                            </div>
+                            <div className="pt-2 flex">
+                                {/* TYPESCRIPT LOGO */}
+                                <Image 
+                                    src="/images/typescript-logo.png"
+                                    width={40}
+                                    height={30}
+                                    alt="Tailwind logo"
+                                />
+                                {/* TAILWIND LOGO */}
+                                <Image 
+                                    src="/images/Tailwind_CSS_Logo.png"
+                                    width={42}
+                                    height={40}
+                                    alt="Tailwind logo"
+                                />
+                            </div>
+
+                            <div className="mt-6 flex items-center">
+                                <motion.a whileHover={{ scale: 1.5 }}>
+                                <Link href="https://github.com/Adamhunter108/i-ching-typescript" legacyBehavior>
+                                        <a  target="_blank" className="text-indigo-600 hover:text-cyan-300">
+                                            <span className="sr-only">GitHub</span>
+                                            <svg className="w-8 h-8" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                                        </a>
+                                </Link>
                                 </motion.a>
                             </div>
                         </div>
@@ -147,7 +213,7 @@ export default function Projects() {
                                     </a>
                                 </Link>
                                 <p className="mt-3 text-base text-gray-500">A marketing website template for a construction company. </p>
-                                <p className="mt-2 text-base text-gray-500">Built with Next.js and styled with Tailwind CSS, the site features SEO, accessibility and image optimization, Google Analytics, serverless API integration, custom built React components, a fully responsive original design and is deployed continuously to Vercel via Git. The site also features custom branding and logo creation.</p>
+                                <p className="mt-2 text-base text-gray-500">Built with Next.js and styled with Tailwind CSS, the site features SEO, accessibility and image optimization, Google Analytics, serverless API integration, custom built React components, animations, a fully responsive original design and is deployed continuously to Vercel via Git. The site also features custom branding and logo creation.</p>
                                 
                             </div>
                             <div className="pt-2 flex">
@@ -243,76 +309,6 @@ export default function Projects() {
                                 </a>
                             </Link>
                             </motion.a>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* PROGRESSIVE WEB APP */}
-                    <motion.div className="flex flex-col rounded-xl shadow-lg overflow-hidden" initial="hidden" animate="visible" variants={{
-                        hidden: {
-                        scale: .5,
-                        opacity: 0
-                        },
-                        visible: {
-                        scale: 1,
-                        opacity: 1,
-                        transition: {
-                            delay: .3,
-                            type: 'tween',
-                            duration: 1
-                        }
-                        }
-                    }}>
-                        <div className="flex-shrink-0">
-                            <motion.div whileHover={{ scale: 1.05 }}>
-                                <Image
-                                    className="h-48 w-full object-cover"
-                                    src="/images/i-ching-ts.gif"
-                                    width={600}
-                                    height={300}
-                                    alt="I Ching"
-                                    // blurDataURL="/images/iching.gif"
-                                    // placeholder="blur"
-                                />
-                            </motion.div> 
-                        </div>
-                        <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
-                            <div className="flex-1">
-                                <p className="text-xl font-semibold text-gray-900">Progressive Web-App</p>
-                                <Link href="https://bookofchanges.app/" legacyBehavior>
-                                    <a  target="_blank" className="block mt-2">
-                                        <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">bookofchanges.app</p>
-                                    </a>
-                                </Link>
-                                <p className="mt-3 text-base text-gray-500">A PWA (progressive web-app) for getting a daily I Ching reading and sharing your results.</p>
-                                <p className="mt-2 text-base text-gray-500">This is a Next.js web-app written in TypeScript, styled with Tailwind CSS and deployed continuously to Vercel via Git.</p>
-                            </div>
-                            <div className="pt-2 flex">
-                                {/* TYPESCRIPT LOGO */}
-                                <Image 
-                                    src="/images/typescript-logo.png"
-                                    width={40}
-                                    height={30}
-                                    alt="Tailwind logo"
-                                />
-                                {/* TAILWIND LOGO */}
-                                <Image 
-                                    src="/images/Tailwind_CSS_Logo.png"
-                                    width={42}
-                                    height={40}
-                                    alt="Tailwind logo"
-                                />
-                            </div>
-
-                            <div className="mt-6 flex items-center">
-                                <motion.a whileHover={{ scale: 1.5 }}>
-                                <Link href="https://github.com/Adamhunter108/i-ching-typescript" legacyBehavior>
-                                        <a  target="_blank" className="text-indigo-600 hover:text-cyan-300">
-                                            <span className="sr-only">GitHub</span>
-                                            <svg className="w-8 h-8" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                                        </a>
-                                </Link>
-                                </motion.a>
                             </div>
                         </div>
                     </motion.div>
