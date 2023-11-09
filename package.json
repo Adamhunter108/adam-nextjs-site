@@ -16,6 +16,7 @@
     "@heroicons/react": "^1.0.6",
     "@mailchimp/mailchimp_marketing": "^3.0.75",
     "@sendgrid/mail": "^7.7.0",
+    "aos": "^2.3.4",
     "axios": "^0.27.2",
     "framer-motion": "^6.3.6",
     "markdown-it": "^13.0.1",
