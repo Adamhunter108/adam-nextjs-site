@@ -1,25 +1,27 @@
 # adam-nextjs-site 👨‍💻
 
-### ℹ️ `About:` 
-A personal portfolio and blog built with `Next.js` and styled with `Tailwind CSS`.  
+### ℹ️ `About:`
 
-The site features incremental static site generation, SEO, accessibility and image optimization, Google Analytics, dynamic routing, API consumption from a headless CMS ([github.com/Adamhunter108/strapi-railway](https://github.com/Adamhunter108/strapi-railway)), SendGrid email and MailChimp API integration, custom built React components, animations and a fully responsive design.  The `main` branch of this git repository deploys to production automatically to Vercel for CI/CD.
+A personal portfolio and blog built with `Next.js` and styled with `Tailwind CSS`.
+
+The site features incremental static site generation, SEO, accessibility and image optimization, Google Analytics, dynamic routing, API consumption from a headless CMS ([Strapi](https://strapi.io/), a Node.js application using PostreSQL), SendGrid email and MailChimp API integration, custom built React components, animations and a fully responsive, custom design. The `main` branch of this git repository deploys to production automatically to Vercel for CI/CD.
 
 ### 📚 `Tech Stack:`
-| JavaScript | Node.js | React | Next.js | Tailwind CSS |
-| :----: | :----: | :----: | :----: | :----: |
-| <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" style="background-color:white;padding:10px;" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" width="50" height="50"/> | 
 
+|                                          JavaScript                                           |                                          Node.js                                          |                                         React                                         |                                                              Next.js                                                               |                                         Tailwind CSS                                         |
+| :-------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
+| <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" style="background-color:white;padding:10px;" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" width="50" height="50"/> |
 
-| SendGrid | Vercel | MailChimp | Google Analytics |
-| :----: | :----: | :----: | :----: |
+|                                         SendGrid                                         |                                                              Vercel                                                               |                                                 MailChimp                                                 |                                         Google Analytics                                         |
+| :--------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
 | <img src="https://cdn.worldvectorlogo.com/logos/sendgrid-1.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/vercel.svg" style="background-color:white;padding:10px;" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/mailchimp-freddie-icon-wink.svg" width="50" height="50"/> | <img src="https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg" width="50" height="50"/> |
 
 ### 💻 `Local Development:`
+
 #### ❗️ `Requirements:`
 
-* Node.js <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="25" height="25"/> 
-* `.env.local` for environment variables
+- Node.js <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width="25" height="25"/>
+- `.env.local` for environment variables
 
 ```bash
 $ # install dependencies
@@ -29,7 +31,6 @@ $ npm run dev
 $ # or
 $ yarn dev
 ```
-
 
 <!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
