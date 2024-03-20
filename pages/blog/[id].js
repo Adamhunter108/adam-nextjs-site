@@ -8,23 +8,26 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeftLong,
+  faArrowRightLong,
+  faBackward,
+} from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 export default function PostPage(props) {
-  const router = useRouter();
-
-  const routerID = router.query.id;
-
   const post = props.post;
+  const router = useRouter();
+  const currentID = Number(router.query.id);
+  const nextPostID = currentID - 1;
+  const prevPostID = currentID + 1;
+  const totalPostCount = props.totalCount;
 
   // to allow html tags in markdown source
   const md = new MarkdownIt({
     html: true,
   });
   const BodyHtml = md.render(post.Body);
-
-  // console.log(post.Header.data.attributes.url)
 
   return (
     <div className="bg-gradient-to-t from-indigo-900 via-black to-indigo-900">
@@ -59,11 +62,8 @@ export default function PostPage(props) {
               type="button"
               className="lg:fixed lg:z-50 px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
             >
-              <FontAwesomeIcon
-                style={{ fontSize: "25px" }}
-                icon={faArrowLeftLong}
-              />{" "}
-              <a>Back</a>
+              <FontAwesomeIcon style={{ fontSize: "25px" }} icon={faBackward} />{" "}
+              <a className="pl-2">Back</a>
             </button>
           </Link>
         </div>
@@ -75,6 +75,47 @@ export default function PostPage(props) {
         <h2 className="pl-3 pt-5 pb-5 text-gray-100 text-2xl text-center">
           {post.Description}
         </h2>
+
+        {/* 
+      /////////////////////////////////////////////////////////////
+      previous and next blog post buttons
+      /////////////////////////////////////////////////////////////
+      */}
+        <div className="flex justify-evenly -mt-6 mb-4">
+          {currentID !== totalPostCount && (
+            <Link href={`/blog/${prevPostID}`} legacyBehavior>
+              <a>
+                <button
+                  type="button"
+                  className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
+                >
+                  <FontAwesomeIcon
+                    style={{ fontSize: "25px" }}
+                    icon={faArrowLeftLong}
+                  />{" "}
+                  <span className="pl-2">Prev</span>
+                </button>
+              </a>
+            </Link>
+          )}
+
+          {currentID !== 1 && (
+            <Link href={`/blog/${nextPostID}`} legacyBehavior>
+              <a>
+                <button
+                  type="button"
+                  className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
+                >
+                  <span className="pr-2">Next</span>
+                  <FontAwesomeIcon
+                    style={{ fontSize: "25px" }}
+                    icon={faArrowRightLong}
+                  />{" "}
+                </button>
+              </a>
+            </Link>
+          )}
+        </div>
 
         <div className="flex flex-col rounded-xl shadow-lg overflow-hidden">
           <div className="flex-1 bg-black/60 backdrop-blur-md p-6 px-10 flex flex-col justify-between">
@@ -107,9 +148,9 @@ export default function PostPage(props) {
                 >
                   <FontAwesomeIcon
                     style={{ fontSize: "25px" }}
-                    icon={faArrowLeftLong}
+                    icon={faBackward}
                   />{" "}
-                  <a>Back</a>
+                  <a className="pl-2">Back</a>
                 </button>
               </Link>
             </div>
@@ -118,10 +159,45 @@ export default function PostPage(props) {
       </main>
 
       {/* 
-            /////////////////////////////////////////////////////////////
-            TODO: make previous and next blog post buttons with routerID
-            /////////////////////////////////////////////////////////////
-            */}
+      /////////////////////////////////////////////////////////////
+      previous and next blog post buttons
+      /////////////////////////////////////////////////////////////
+      */}
+      <div className="flex justify-evenly mb-4">
+        {currentID !== totalPostCount && (
+          <Link href={`/blog/${prevPostID}`} legacyBehavior>
+            <a>
+              <button
+                type="button"
+                className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
+              >
+                <FontAwesomeIcon
+                  style={{ fontSize: "25px" }}
+                  icon={faArrowLeftLong}
+                />{" "}
+                <span className="pl-2">Prev</span>
+              </button>
+            </a>
+          </Link>
+        )}
+
+        {currentID !== 1 && (
+          <Link href={`/blog/${nextPostID}`} legacyBehavior>
+            <a>
+              <button
+                type="button"
+                className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
+              >
+                <span className="pr-2">Next</span>
+                <FontAwesomeIcon
+                  style={{ fontSize: "25px" }}
+                  icon={faArrowRightLong}
+                />{" "}
+              </button>
+            </a>
+          </Link>
+        )}
+      </div>
 
       <Footer />
     </div>
@@ -131,16 +207,28 @@ export default function PostPage(props) {
 // static site generation (or serverside) needs to get data before page loads
 export async function getStaticProps({ params }) {
   const API_URL = `https://strapi-production-b724.up.railway.app/api/blogs/${params.id}?populate=*`;
+  const ALL_POSTS_URL =
+    "https://strapi-production-b724.up.railway.app/api/blogs?populate=*";
   const API_TOKEN = process.env.NEXT_PUBLIC_STRAPI_AUTH_TOKEN_RAILWAY;
-  const response = await axios.get(API_URL, {
+
+  const postResponse = await axios.get(API_URL, {
     headers: {
       Authorization: `bearer ${API_TOKEN}`,
     },
   });
 
+  const allPostsResponse = await axios.get(ALL_POSTS_URL, {
+    headers: {
+      Authorization: `bearer ${API_TOKEN}`,
+    },
+  });
+
+  const totalCount = allPostsResponse.data.data.length;
+
   return {
     props: {
-      post: response.data.data.attributes,
+      post: postResponse.data.data.attributes,
+      totalCount: totalCount,
     },
 
     revalidate: 60,
