@@ -58,13 +58,18 @@ export default function PostPage(props) {
       <main className="">
         <div className="pt-2 lg:pt-5 pl-2 lg:pl-6">
           <Link href="/blog" legacyBehavior>
-            <button
-              type="button"
-              className="lg:fixed lg:z-50 px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
-            >
-              <FontAwesomeIcon style={{ fontSize: "25px" }} icon={faBackward} />{" "}
-              <a className="pl-2">Back</a>
-            </button>
+            <a>
+              <button className="lg:fixed lg:z-50 relative inline-flex h-12 overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                  <FontAwesomeIcon
+                    style={{ fontSize: "25px" }}
+                    icon={faBackward}
+                  />{" "}
+                  <span className="pl-2">Back</span>
+                </span>
+              </button>
+            </a>
           </Link>
         </div>
 
@@ -81,19 +86,19 @@ export default function PostPage(props) {
       previous and next blog post buttons
       /////////////////////////////////////////////////////////////
       */}
-        <div className="flex justify-evenly -mt-6 mb-4">
+        <div className="flex justify-evenly mb-4">
           {currentID !== totalPostCount && (
             <Link href={`/blog/${prevPostID}`} legacyBehavior>
               <a>
-                <button
-                  type="button"
-                  className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
-                >
-                  <FontAwesomeIcon
-                    style={{ fontSize: "25px" }}
-                    icon={faArrowLeftLong}
-                  />{" "}
-                  <span className="pl-2">Prev</span>
+                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                    <FontAwesomeIcon
+                      style={{ fontSize: "25px" }}
+                      icon={faArrowLeftLong}
+                    />{" "}
+                    <span className="pl-2">Prev</span>
+                  </span>
                 </button>
               </a>
             </Link>
@@ -102,15 +107,15 @@ export default function PostPage(props) {
           {currentID !== 1 && (
             <Link href={`/blog/${nextPostID}`} legacyBehavior>
               <a>
-                <button
-                  type="button"
-                  className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
-                >
-                  <span className="pr-2">Next</span>
-                  <FontAwesomeIcon
-                    style={{ fontSize: "25px" }}
-                    icon={faArrowRightLong}
-                  />{" "}
+                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                    <span className="pr-2">Next</span>
+                    <FontAwesomeIcon
+                      style={{ fontSize: "25px" }}
+                      icon={faArrowRightLong}
+                    />{" "}
+                  </span>
                 </button>
               </a>
             </Link>
@@ -142,16 +147,18 @@ export default function PostPage(props) {
 
             <div className="lg:hidden pt-2 pb-5 lg:pl-5">
               <Link href="/blog" legacyBehavior>
-                <button
-                  type="button"
-                  className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
-                >
-                  <FontAwesomeIcon
-                    style={{ fontSize: "25px" }}
-                    icon={faBackward}
-                  />{" "}
-                  <a className="pl-2">Back</a>
-                </button>
+                <a>
+                  <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                      <FontAwesomeIcon
+                        style={{ fontSize: "25px" }}
+                        icon={faBackward}
+                      />{" "}
+                      <span className="pl-2">Back</span>
+                    </span>
+                  </button>
+                </a>
               </Link>
             </div>
           </div>
@@ -163,19 +170,19 @@ export default function PostPage(props) {
       previous and next blog post buttons
       /////////////////////////////////////////////////////////////
       */}
-      <div className="flex justify-evenly mb-4">
+      <div className="flex justify-evenly mt-5 mb-4">
         {currentID !== totalPostCount && (
           <Link href={`/blog/${prevPostID}`} legacyBehavior>
             <a>
-              <button
-                type="button"
-                className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
-              >
-                <FontAwesomeIcon
-                  style={{ fontSize: "25px" }}
-                  icon={faArrowLeftLong}
-                />{" "}
-                <span className="pl-2">Prev</span>
+              <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                  <FontAwesomeIcon
+                    style={{ fontSize: "25px" }}
+                    icon={faArrowLeftLong}
+                  />{" "}
+                  <span className="pl-2">Prev</span>
+                </span>
               </button>
             </a>
           </Link>
@@ -184,15 +191,15 @@ export default function PostPage(props) {
         {currentID !== 1 && (
           <Link href={`/blog/${nextPostID}`} legacyBehavior>
             <a>
-              <button
-                type="button"
-                className="px-3.5 mt-8 py-2 bg-gradient-to-b from-indigo-800 via-indigo-600 to-indigo-400 text-gray-50 hover:bg-gradient-to-t from-indigo-800 via-indigo-600 to-indigo-400 hover:text-gray-400 font-light rounded-md text-lg flex flex-row items-center"
-              >
-                <span className="pr-2">Next</span>
-                <FontAwesomeIcon
-                  style={{ fontSize: "25px" }}
-                  icon={faArrowRightLong}
-                />{" "}
+              <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[3px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                  <span className="pr-2">Next</span>
+                  <FontAwesomeIcon
+                    style={{ fontSize: "25px" }}
+                    icon={faArrowRightLong}
+                  />{" "}
+                </span>
               </button>
             </a>
           </Link>
