@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        code: ['Source Code Pro', 'sans-serif']
-      }
+        code: ["Source Code Pro", "sans-serif"],
+      },
     },
   },
   plugins: [],
-}
+};
