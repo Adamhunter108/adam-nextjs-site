@@ -440,7 +440,7 @@ export default function Projects() {
                   >
                     <a target="_blank" className="block mt-2">
                       <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
-                        youtube-scraper-poc-fe.vercel.app/
+                        youtube-scraper-poc-fe.vercel.app
                       </p>
                     </a>
                   </Link>
