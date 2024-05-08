@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Subscribe from "../components/Subscribe";
 import { motion } from "framer-motion";
 import TypeAnimation from "react-type-animation";
+import { CornerNav } from "../components/CornerNav";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
         <link rel="icon" href="/adamlaptop.ico" />
       </Head>
 
-      <NavBar />
+      {/* <NavBar /> */}
+      <CornerNav />
 
       <main>
         <div className="relative pt-32 pb-56 lg:pb-64 flex content-center items-center justify-center min-h-screen-75">

@@ -6,6 +6,7 @@ import Image from "next/image";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
+import { CornerNav } from "../../components/CornerNav";
 
 export default function Blog(props) {
   const posts = props.posts;
@@ -20,12 +21,13 @@ export default function Blog(props) {
         <title>Adam Hunter Blog</title>
         <meta
           name="description"
-          content="This is probably going to be the new blog for Adam Hunter.  The blog is mostly about coding and programming technologies using both Python and JavaScript with a heavy emphasis on React.  This blog is a Next.js app powered by Strapi CMS, hosted on Heroku and uses a PostgreSQL database."
+          content="Adam Hunter's full-stack development blog.  The blog is mostly about coding and programming technologies using Python and JavaScript / TypeScript with a heavy emphasis on React.  This blog is a Next.js app powered by Strapi CMS and uses a PostgreSQL database."
         />
         <link rel="icon" href="/adampensive.ico" />
       </Head>
 
-      <NavBar />
+      {/* <NavBar /> */}
+      <CornerNav />
 
       <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pt-20 pb-20 px-4 sm:px-6 lg:pt-15 lg:pb-28 lg:px-8">
         <div className="relative max-w-7xl mx-auto">

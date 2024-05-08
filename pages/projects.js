@@ -5,6 +5,7 @@ import Image from "next/image";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import { CornerNav } from "../components/CornerNav";
 
 export default function Projects() {
   return (
@@ -18,7 +19,8 @@ export default function Projects() {
         <link rel="icon" href="/adammindblown.ico" />
       </Head>
 
-      <NavBar />
+      {/* <NavBar /> */}
+      <CornerNav />
 
       <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pt-20 pb-20 px-4 sm:px-6 lg:pt-15 lg:pb-28 lg:px-8">
         <div className="relative max-w-7xl mx-auto">
