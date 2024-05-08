@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 export const CornerNav = () => {
   return (
@@ -44,6 +45,11 @@ const LinksContainer = () => {
 };
 
 const NavLink = ({ children, href, idx }) => {
+  const router = useRouter();
+  const currentRoute = router.asPath;
+  const isActive =
+    href === "/" ? currentRoute === href : currentRoute.startsWith(href);
+
   return (
     <motion.a
       initial={{ opacity: 0, y: -8 }}
@@ -58,7 +64,9 @@ const NavLink = ({ children, href, idx }) => {
       }}
       exit={{ opacity: 0, y: -8 }}
       href={href}
-      className="block text-5xl font-semibold text-violet-300 transition-colors hover:text-violet-50 md:text-7xl"
+      className={`${
+        isActive ? "text-violet-50" : "text-violet-300"
+      } block text-5xl font-semibold  transition-colors hover:text-violet-50 md:text-7xl`}
     >
       {children}
     </motion.a>
