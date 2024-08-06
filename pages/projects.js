@@ -34,6 +34,183 @@ export default function Projects() {
           </div>
 
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            {/* SprigSwap */}
+            <motion.div
+              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  scale: 0.5,
+                  opacity: 0,
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    type: "tween",
+                    duration: 1,
+                  },
+                },
+              }}
+            >
+              <div className="flex-shrink-0">
+                <motion.div whileHover={{ scale: 1.05 }}>
+                  <Image
+                    className="h-48 w-full object-cover"
+                    src="/images/sprigswaphero.png"
+                    width={600}
+                    height={300}
+                    alt="I Ching"
+                    blurDataURL="/images/sprigswaphero.png"
+                    placeholder="blur"
+                  />
+                </motion.div>
+              </div>
+              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
+                <div className="flex-1">
+                  <p className="text-xl font-semibold text-gray-900">
+                    SprigSwap
+                  </p>
+                  <Link href="https://www.sprigswap.com" legacyBehavior>
+                    <a target="_blank" className="block mt-2">
+                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
+                        sprigswap.com
+                      </p>
+                    </a>
+                  </Link>
+                  <p className="mt-3 text-base text-gray-500">
+                    SprigSwap is an Avani Tech Consultancy MVP that I am
+                    currently contributing to as a full-stack engineer.
+                    SprigSwap is a mobile-first web-app marketplace tailored for
+                    parents and caregivers for buying, selling and giving away
+                    second-hand items for kids.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    SprigSwap is a Next.js application written in TypeScript
+                    that uses Zustand for state management, Tailwind CSS and
+                    Framer Motion for the UI and a suite of Google Cloud
+                    products. Firebase is leveraged for real-time database
+                    functionalities, authentication and media storage.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    The app features an intuitive and clean UI that offers
+                    different experiences on mobile, tablets and large screens.
+                    Highlight features include an in-app live chat, seamless
+                    infinite scroll on the main posts feed, full account
+                    management, public storefront profiles and AI powered
+                    search.
+                  </p>
+                </div>
+                <div className="pt-2 flex">
+                  {/* TYPESCRIPT LOGO */}
+                  <Image
+                    src="/images/typescript-logo.png"
+                    width={40}
+                    height={30}
+                    alt="Tailwind logo"
+                  />
+                  {/* TAILWIND LOGO */}
+                  <Image
+                    src="/images/Tailwind_CSS_Logo.png"
+                    width={42}
+                    height={40}
+                    alt="Tailwind logo"
+                    className="ml-1"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Bedlam */}
+            <motion.div
+              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  scale: 0.5,
+                  opacity: 0,
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    type: "tween",
+                    duration: 1,
+                  },
+                },
+              }}
+            >
+              <div className="flex-shrink-0">
+                <motion.div whileHover={{ scale: 1.05 }}>
+                  <video
+                    className="h-48 w-full object-cover"
+                    preload="auto"
+                    autoPlay="true"
+                    loop
+                    playsInline
+                    controls
+                  >
+                    <source src="/images/bedlam.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </motion.div>
+              </div>
+              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
+                <div className="flex-1">
+                  <p className="text-xl font-semibold text-gray-900">
+                    Bedlam.gg
+                  </p>
+                  <Link href="https://www.bedlamgg.com/" legacyBehavior>
+                    <a target="_blank" className="block mt-2">
+                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
+                        bedlam.gg
+                      </p>
+                    </a>
+                  </Link>
+                  <p className="mt-3 text-base text-gray-500">
+                    Bedlam is an Everyrealm product that I contributed to as a
+                    full-stack software engineer. Bedlam is a SaaS platform that
+                    serves as a “link in bio” for competitive and casual gamers
+                    as well as game and content creators.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    Bedlam uses a modern and diverse tech stack which includes
+                    TypeScript, Next.js, Tailwind CSS with DaisyUI, Zustand,
+                    Auth0, and Vercel for the frontend. The backend uses a suite
+                    of AWS tools such as AWS Lambda, API Gateway, and DynamoDB
+                    orchestrated with AWS CDK.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    The platform allows for various third party gaming
+                    integrations such as connecting Steam accounts to display
+                    real-time in game stats. The platform also offers unlockable
+                    rewards in the form of profile customizations.
+                  </p>
+                </div>
+                <div className="pt-2 flex">
+                  {/* TYPESCRIPT LOGO */}
+                  <Image
+                    src="/images/typescript-logo.png"
+                    width={40}
+                    height={30}
+                    alt="Tailwind logo"
+                  />
+                  {/* TAILWIND LOGO */}
+                  <Image
+                    src="/images/Tailwind_CSS_Logo.png"
+                    width={42}
+                    height={40}
+                    alt="Tailwind logo"
+                    className="ml-1"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
             {/* PROGRESSIVE WEB APP */}
             <motion.div
               className="flex flex-col rounded-xl shadow-lg overflow-hidden"
@@ -71,7 +248,7 @@ export default function Projects() {
               <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <p className="text-xl font-semibold text-gray-900">
-                    Full-Stack Progressive Web-App
+                    I Ching: Book of Changes
                   </p>
                   <Link href="https://bookofchanges.app/" legacyBehavior>
                     <a target="_blank" className="block mt-2">
@@ -81,23 +258,22 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    A full-stack PWA (Progressive Web-App) for getting I Ching
-                    readings, storing and sharing your results.
+                    I Ching: Book of Changes is full-stack PWA (Progressive
+                    Web-App) for getting I Ching readings, storing and sharing
+                    your results.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     The frontend is a Next.js application written in TypeScript,
-                    styled with Tailwind CSS and deployed continuously to Vercel
-                    via Git.
+                    styled with Tailwind CSS and deployed to and hosted on
+                    Vercel via Git. The backend leverages Supabase, where a
+                    PostgreSQL database stores user data.
                   </p>
-                  <p className="mt-2 text-base text-gray-500">
-                    The backend is built with Supabase, where a PostgreSQL
-                    database stores user data.
-                  </p>
+
                   <p className="mt-2 text-base text-gray-500">
                     The app offers user authentication using both email/password
-                    and Single Sign-On (SSO) for Google accounts. While the app
-                    is fully functional for users without accounts, those who
-                    have accounts are able to save their readings.
+                    and SSO (Single Sign-On) for Google accounts. The app is
+                    fully functional for users without accounts but those who
+                    sign in are able to save their readings.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     This app can be installed on any desktop or mobile device
@@ -128,6 +304,7 @@ export default function Projects() {
                     width={42}
                     height={40}
                     alt="Tailwind logo"
+                    className="ml-1"
                   />
                 </div>
 
@@ -135,6 +312,289 @@ export default function Projects() {
                   <motion.a whileHover={{ scale: 1.5 }}>
                     <Link
                       href="https://github.com/Adamhunter108/i-ching-nextjs-supabase"
+                      legacyBehavior
+                    >
+                      <a
+                        target="_blank"
+                        className="text-indigo-600 hover:text-cyan-300"
+                      >
+                        <span className="sr-only">GitHub</span>
+                        <svg
+                          className="w-8 h-8"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 496 512"
+                        >
+                          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg>
+                      </a>
+                    </Link>
+                  </motion.a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* WEB APP GAME */}
+            <motion.div
+              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  scale: 0.5,
+                  opacity: 0,
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    type: "tween",
+                    duration: 1,
+                  },
+                },
+              }}
+            >
+              <div className="flex-shrink-0">
+                <motion.div whileHover={{ scale: 1.05 }}>
+                  <Image
+                    className="h-48 w-full object-cover"
+                    src="/images/ceelodemo.gif"
+                    width={600}
+                    height={300}
+                    alt="Cee Lo"
+                    blurDataURL="/images/ceelodemo.gif"
+                    placeholder="blur"
+                  />
+                </motion.div>
+              </div>
+              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
+                <div className="flex-1">
+                  <p className="text-xl font-semibold text-gray-900">Cee Lo</p>
+                  <Link href="https://ceelo.vercel.app/" legacyBehavior>
+                    <a target="_blank" className="block mt-2">
+                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
+                        ceelo.vercel.app
+                      </p>
+                    </a>
+                  </Link>
+                  <p className="mt-3 text-base text-gray-500">
+                    Cee Lo is a browser based multiplayer dice game web-app.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    This web-app is built with Next.js 14, TypeScript, and
+                    styled with Tailwind CSS. The UI is mobile-first responsive
+                    and features custom CSS animations as well as graphics
+                    generated with AI.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    The app flow offers two game modes, Free Throw and 2 Player.
+                    Free Throw allows for unlimited rolls of three dice to find
+                    Cee Lo scores while the 2 Player mode accepts two names and
+                    offers an interactive flow that enforces game rules to
+                    determine a winner. In 2 Player mode, the web-app keeps
+                    track of wins and losses.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    Please see the{" "}
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-indigo-600 hover:text-cyan-300"
+                      href="https://ceelo.vercel.app/about"
+                    >
+                      about page
+                    </a>{" "}
+                    for more on Cee Lo and how to play.
+                  </p>
+                </div>
+                <div className="pt-2 flex">
+                  {/* TYPESCRIPT LOGO */}
+                  <Image
+                    src="/images/typescript-logo.png"
+                    width={40}
+                    height={30}
+                    alt="Tailwind logo"
+                  />
+                  {/* TAILWIND LOGO */}
+                  <Image
+                    src="/images/Tailwind_CSS_Logo.png"
+                    width={42}
+                    height={40}
+                    alt="Tailwind logo"
+                    className="ml-1"
+                  />
+                </div>
+
+                <div className="mt-6 flex items-center">
+                  <motion.a whileHover={{ scale: 1.5 }}>
+                    <Link
+                      href="https://github.com/Adamhunter108/ceelo"
+                      legacyBehavior
+                    >
+                      <a
+                        target="_blank"
+                        className="text-indigo-600 hover:text-cyan-300"
+                      >
+                        <span className="sr-only">GitHub</span>
+                        <svg
+                          className="w-8 h-8"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 496 512"
+                        >
+                          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg>
+                      </a>
+                    </Link>
+                  </motion.a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* INTERNAL TOOL */}
+            <motion.div
+              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  scale: 0.5,
+                  opacity: 0,
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.4,
+                    type: "tween",
+                    duration: 1,
+                  },
+                },
+              }}
+            >
+              <div className="flex-shrink-0">
+                <motion.div whileHover={{ scale: 1.05 }}>
+                  <Image
+                    className="h-48 w-full object-cover"
+                    src="/images/youtube-scraper-screenshot.jpg"
+                    width={600}
+                    height={300}
+                    // blurDataURL="/images/thirtysix.png"
+                    // placeholder="blur"
+                    alt="36 chambers"
+                  />
+                </motion.div>
+              </div>
+              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
+                <div className="flex-1">
+                  <p className="text-xl font-semibold text-gray-900">
+                    YouTube Content Scraper
+                  </p>
+                  <Link
+                    href="https://youtube-scraper-poc-fe.vercel.app/"
+                    legacyBehavior
+                  >
+                    <a target="_blank" className="block mt-2">
+                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
+                        youtube-scraper-poc-fe.vercel.app
+                      </p>
+                    </a>
+                  </Link>
+                  <p className="mt-3 text-base text-gray-500">
+                    This is a proof-of-concept internal tool that was developed
+                    for a specific music corporation to find and monitor
+                    copyrighted content on YouTube.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    This is a full-stack app comprised of a Python Flask{" "}
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-indigo-600 hover:text-cyan-300"
+                      href="https://github.com/Adamhunter108/youtube_scraper"
+                    >
+                      backend
+                    </a>
+                    , which serves as a secure API, that searches the YouTube
+                    Data API, can exclude specific channels by title (such as
+                    official accounts) from the search and will automatically
+                    save the results to a PostgreSQL database. The Flask app is
+                    continuously deployed to Heroku via GitHub, while the
+                    database, which was provisioned with SQL queries is hosted
+                    with Supabase.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    The{" "}
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-indigo-600 hover:text-cyan-300"
+                      href="https://github.com/Adamhunter108/youtube-scraper-poc-fe"
+                    >
+                      frontend
+                    </a>{" "}
+                    is a Next.js 14 application written in TypeScript and styled
+                    with Tailwind CSS. This app features serverless API routes
+                    that protect sensitive data such as API keys and database
+                    URLs by storing them server-side. The UI allows users to
+                    browse the YouTube Data API, optionally filter out specific
+                    channels, save results and browse and manage the database.
+                    It is deployed continuously to Vercel via GitHub.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    <span className="italic">note</span>: the code is public but
+                    the deployed UI is live and is password protected to prevent
+                    abuse, please email me if you&apos;d like access.
+                  </p>
+                </div>
+                <div className="pt-2 flex">
+                  {/* PYTHON SVG */}
+                  <svg
+                    className="w-10 h-10 pr-1"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z" />
+                  </svg>
+                  {/* NEXT LOGO */}
+                  <Image
+                    src="/images/nextlogo2.png"
+                    width={49}
+                    height={49}
+                    alt="Next logo"
+                  />
+                </div>
+                <div className="mt-6 flex items-center">
+                  <motion.a whileHover={{ scale: 1.5 }}>
+                    <Link
+                      href="https://github.com/Adamhunter108/youtube_scraper"
+                      legacyBehavior
+                    >
+                      <a
+                        target="_blank"
+                        className="text-indigo-600 hover:text-cyan-300"
+                      >
+                        <span className="sr-only">GitHub</span>
+                        <svg
+                          className="w-8 h-8"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 496 512"
+                        >
+                          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg>
+                      </a>
+                    </Link>
+                  </motion.a>
+                  <motion.a className="pl-3" whileHover={{ scale: 1.5 }}>
+                    <Link
+                      href="https://github.com/Adamhunter108/youtube-scraper-poc-fe"
                       legacyBehavior
                     >
                       <a
@@ -267,300 +727,6 @@ export default function Projects() {
               </div>
             </motion.div>
 
-            {/* WEB APP GAME */}
-            <motion.div
-              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {
-                  scale: 0.5,
-                  opacity: 0,
-                },
-                visible: {
-                  scale: 1,
-                  opacity: 1,
-                  transition: {
-                    delay: 0.3,
-                    type: "tween",
-                    duration: 1,
-                  },
-                },
-              }}
-            >
-              <div className="flex-shrink-0">
-                <motion.div whileHover={{ scale: 1.05 }}>
-                  <Image
-                    className="h-48 w-full object-cover"
-                    src="/images/ceelodemo.gif"
-                    width={600}
-                    height={300}
-                    alt="Cee Lo"
-                    blurDataURL="/images/ceelodemo.gif"
-                    placeholder="blur"
-                  />
-                </motion.div>
-              </div>
-              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
-                <div className="flex-1">
-                  <p className="text-xl font-semibold text-gray-900">
-                    Web-App Game
-                  </p>
-                  <Link href="https://ceelo.vercel.app/" legacyBehavior>
-                    <a target="_blank" className="block mt-2">
-                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
-                        ceelo.vercel.app
-                      </p>
-                    </a>
-                  </Link>
-                  <p className="mt-3 text-base text-gray-500">
-                    A Cee Lo dice game web-app.
-                  </p>
-                  <p className="mt-2 text-base text-gray-500">
-                    This web-app is built with Next.js 14, TypeScript, and
-                    Tailwind CSS. The UI is mobile-first responsive and features
-                    custom CSS animations and React components as well as
-                    graphics generated with AI.
-                  </p>
-                  <p className="mt-2 text-base text-gray-500">
-                    The app flow offers two game modes, Free Throw and 2 Player.
-                    Free Throw allows for unlimited rolls of three dice to find
-                    Cee Lo scores while the 2 Player mode accepts two names and
-                    offers an interactive flow that enforces game rules to
-                    determine a winner.
-                  </p>
-                  <p className="mt-2 text-base text-gray-500">
-                    Please see the{" "}
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-indigo-600 hover:text-cyan-300"
-                      href="https://github.com/Adamhunter108/ceelo#ℹ%EF%B8%8F-about"
-                    >
-                      README
-                    </a>{" "}
-                    for more on Cee Lo and how to play.
-                  </p>
-                </div>
-                <div className="pt-2 flex">
-                  {/* TYPESCRIPT LOGO */}
-                  <Image
-                    src="/images/typescript-logo.png"
-                    width={40}
-                    height={30}
-                    alt="Tailwind logo"
-                  />
-                  {/* TAILWIND LOGO */}
-                  <Image
-                    src="/images/Tailwind_CSS_Logo.png"
-                    width={42}
-                    height={40}
-                    alt="Tailwind logo"
-                  />
-                </div>
-
-                <div className="mt-6 flex items-center">
-                  <motion.a whileHover={{ scale: 1.5 }}>
-                    <Link
-                      href="https://github.com/Adamhunter108/ceelo"
-                      legacyBehavior
-                    >
-                      <a
-                        target="_blank"
-                        className="text-indigo-600 hover:text-cyan-300"
-                      >
-                        <span className="sr-only">GitHub</span>
-                        <svg
-                          className="w-8 h-8"
-                          aria-hidden="true"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 496 512"
-                        >
-                          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* INTERNAL TOOL */}
-            <motion.div
-              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {
-                  scale: 0.5,
-                  opacity: 0,
-                },
-                visible: {
-                  scale: 1,
-                  opacity: 1,
-                  transition: {
-                    delay: 0.4,
-                    type: "tween",
-                    duration: 1,
-                  },
-                },
-              }}
-            >
-              <div className="flex-shrink-0">
-                <motion.div whileHover={{ scale: 1.05 }}>
-                  <Image
-                    className="h-48 w-full object-cover"
-                    src="/images/youtube-scraper-screenshot.jpg"
-                    width={600}
-                    height={300}
-                    // blurDataURL="/images/thirtysix.png"
-                    // placeholder="blur"
-                    alt="36 chambers"
-                  />
-                </motion.div>
-              </div>
-              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
-                <div className="flex-1">
-                  <p className="text-xl font-semibold text-gray-900">
-                    Internal Tool: Web Scraper
-                  </p>
-                  {/* <Link href="youtube-scraper-poc-fe.vercel.app" legacyBehavior>
-                  <a
-                    href="youtube-scraper-poc-fe.vercel.app"
-                    target="_blank"
-                    className="block mt-2"
-                  >
-                    <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
-                      youtube-scraper-poc-fe.vercel.app
-                    </p>
-                  </a>
-                  </Link> */}
-                  <Link
-                    href="https://youtube-scraper-poc-fe.vercel.app/"
-                    legacyBehavior
-                  >
-                    <a target="_blank" className="block mt-2">
-                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
-                        youtube-scraper-poc-fe.vercel.app
-                      </p>
-                    </a>
-                  </Link>
-                  <p className="mt-3 text-base text-gray-500">
-                    A proof-of-concept internal tool to find and monitor
-                    copyrighted content on YouTube.
-                  </p>
-                  <p className="mt-2 text-base text-gray-500">
-                    This is a full-stack app comprised of a Python Flask app{" "}
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-indigo-600 hover:text-cyan-300"
-                      href="https://github.com/Adamhunter108/youtube_scraper"
-                    >
-                      backend
-                    </a>
-                    , which serves as a secure API, that searches the YouTube
-                    Data API, can exclude specific channels by title (such as
-                    official accounts) from the search and will automatically
-                    save the results to a PostgreSQL database. The Flask app is
-                    continuously deployed to Heroku via GitHub while the
-                    database, which was provisioned with SQL queries is hosted
-                    with Supabase.
-                  </p>
-                  <p className="mt-2 text-base text-gray-500">
-                    The{" "}
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-indigo-600 hover:text-cyan-300"
-                      href="https://github.com/Adamhunter108/youtube-scraper-poc-fe"
-                    >
-                      frontend
-                    </a>{" "}
-                    UI is a Next.js 14 application written in TypeScript and
-                    styled with Tailwind CSS. This app features serverless API
-                    routes that protect sensitive data such as API keys and
-                    database URLs by storing them server-side. The UI allows
-                    users to search the YouTube Data API, optionally filter out
-                    specific channels, and browse and manage the PostgreSQL
-                    database where search results are stored. It is deployed
-                    continuously to Vercel via GitHub.
-                  </p>
-                  <p className="mt-2 text-base text-gray-500">
-                    <span className="italic">note</span>: the deployed UI is
-                    live and is password protected, please email me if
-                    you&apos;d like access.
-                  </p>
-                </div>
-                <div className="pt-2 flex">
-                  {/* PYTHON SVG */}
-                  <svg
-                    className="w-10 h-10 pr-1"
-                    aria-hidden="true"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                  >
-                    <path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z" />
-                  </svg>
-                  {/* NEXT LOGO */}
-                  <Image
-                    src="/images/nextlogo2.png"
-                    width={49}
-                    height={49}
-                    alt="Next logo"
-                  />
-                </div>
-                <div className="mt-6 flex items-center">
-                  <motion.a whileHover={{ scale: 1.5 }}>
-                    <Link
-                      href="https://github.com/Adamhunter108/youtube_scraper"
-                      legacyBehavior
-                    >
-                      <a
-                        target="_blank"
-                        className="text-indigo-600 hover:text-cyan-300"
-                      >
-                        <span className="sr-only">GitHub</span>
-                        <svg
-                          className="w-8 h-8"
-                          aria-hidden="true"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 496 512"
-                        >
-                          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </motion.a>
-                  <motion.a className="pl-3" whileHover={{ scale: 1.5 }}>
-                    <Link
-                      href="https://github.com/Adamhunter108/youtube-scraper-poc-fe"
-                      legacyBehavior
-                    >
-                      <a
-                        target="_blank"
-                        className="text-indigo-600 hover:text-cyan-300"
-                      >
-                        <span className="sr-only">GitHub</span>
-                        <svg
-                          className="w-8 h-8"
-                          aria-hidden="true"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 496 512"
-                        >
-                          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-
             {/* WEB DEV */}
             <motion.div
               className="flex flex-col rounded-xl shadow-lg overflow-hidden"
@@ -596,7 +762,7 @@ export default function Projects() {
               <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <p className="text-xl font-semibold text-gray-900">
-                    Web Development
+                    The Ivy LBNY
                   </p>
                   <Link href="https://www.theivylbny.com/" legacyBehavior>
                     <a target="_blank" className="block mt-2">
@@ -706,7 +872,7 @@ export default function Projects() {
               <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <p className="text-xl font-semibold text-gray-900">
-                    Web Design
+                    Web Design Demo Site
                   </p>
                   <Link
                     href="https://a-construction-company.vercel.app/"
@@ -719,7 +885,8 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    A marketing website template for a construction company.{" "}
+                    A marketing website demo developed for a construction
+                    company.{" "}
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     Built with Next.js and styled with Tailwind CSS, the site
@@ -809,7 +976,7 @@ export default function Projects() {
               <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <p className="text-xl font-semibold text-gray-900">
-                    Full-stack E-commerce
+                    Full-stack E-commerce Demo
                   </p>
                   <Link
                     href="https://thirtysixchambers.herokuapp.com/"
