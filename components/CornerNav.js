@@ -153,7 +153,8 @@ const UNDERLAY_VARIANTS = {
   open: {
     width: "calc(100% - 32px)",
     height: "calc(100vh - 32px)",
-    transition: { type: "spring", mass: 3, stiffness: 400, damping: 50 },
+    // transition: { type: "spring", mass: 3, stiffness: 400, damping: 50 },
+    transition: { type: "spring", mass: 1, stiffness: 500, damping: 25 },
   },
   closed: {
     width: "80px",
@@ -173,18 +174,22 @@ const HAMBURGER_VARIANTS = {
     open: {
       rotate: ["0deg", "0deg", "45deg"],
       top: ["35%", "50%", "50%"],
+      transition: { duration: 0.25, ease: "easeOut" },
     },
     closed: {
       rotate: ["45deg", "0deg", "0deg"],
       top: ["50%", "50%", "35%"],
+      transition: { duration: 0.25, ease: "easeOut" },
     },
   },
   middle: {
     open: {
       rotate: ["0deg", "0deg", "-45deg"],
+      transition: { duration: 0.25, ease: "easeOut" },
     },
     closed: {
       rotate: ["-45deg", "0deg", "0deg"],
+      transition: { duration: 0.25, ease: "easeOut" },
     },
   },
   bottom: {
@@ -192,11 +197,13 @@ const HAMBURGER_VARIANTS = {
       rotate: ["0deg", "0deg", "45deg"],
       bottom: ["35%", "50%", "50%"],
       left: "50%",
+      transition: { duration: 0.25, ease: "easeOut" },
     },
     closed: {
       rotate: ["45deg", "0deg", "0deg"],
       bottom: ["50%", "50%", "35%"],
       left: "calc(50% + 10px)",
+      transition: { duration: 0.25, ease: "easeOut" },
     },
   },
 };
