@@ -34,6 +34,95 @@ export default function Projects() {
           </div>
 
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            {/* CYPHERSPACE */}
+            <motion.div
+              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  scale: 0.5,
+                  opacity: 0,
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    type: "tween",
+                    duration: 1,
+                  },
+                },
+              }}
+            >
+              <div className="flex-shrink-0">
+                <motion.div whileHover={{ scale: 1.05 }}>
+                  <Image
+                    className="h-48 w-full object-cover"
+                    src="/images/csmockups.png"
+                    width={600}
+                    height={300}
+                    alt="I Ching"
+                    blurDataURL="/images/csmockups.png"
+                    placeholder="blur"
+                  />
+                </motion.div>
+              </div>
+              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
+                <div className="flex-1">
+                  <p className="text-xl font-semibold text-gray-900">
+                    CypherSpace.ai
+                  </p>
+                  <Link href="https://www.cypherspace.ai/" legacyBehavior>
+                    <a target="_blank" className="block mt-2">
+                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
+                        cypherspace.ai
+                      </p>
+                    </a>
+                  </Link>
+                  <p className="mt-3 text-base text-gray-500">
+                    CypherSpace is a web-app for collaborative AI engagement.
+                    The platform allows users to engage in private, real-time
+                    group chats with access to multiple conversational AI models
+                    as well as multiple AI generative imaging models.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    CypherSpace is comprised of a websocket server, a Next.js
+                    application and GCP (Google Cloud Platform) services. The
+                    websocket server handles room creation, room user
+                    management, online status, and broadcasting messages in
+                    real-time. The server is a Node.js Express application,
+                    written in TypeScript, which is deployed to a DigitalOcean
+                    droplet Ubuntu instance.
+                  </p>
+                  <p className="mt-2 text-base text-gray-500">
+                    The Next.js application is hosted on Vercel and styled with
+                    Tailwind CSS, ShadcnUI and Framer Motion. Zustand is used
+                    for state management and Firebase is used for
+                    authentication, user and conversation databases and storage
+                    for users&apos; generated media.
+                  </p>
+                </div>
+                <div className="pt-2 flex">
+                  {/* TYPESCRIPT LOGO */}
+                  <Image
+                    src="/images/typescript-logo.png"
+                    width={40}
+                    height={30}
+                    alt="Tailwind logo"
+                  />
+                  {/* TAILWIND LOGO */}
+                  <Image
+                    src="/images/Tailwind_CSS_Logo.png"
+                    width={42}
+                    height={40}
+                    alt="Tailwind logo"
+                    className="ml-1"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
             {/* SprigSwap */}
             <motion.div
               className="flex flex-col rounded-xl shadow-lg overflow-hidden"
@@ -81,11 +170,10 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    SprigSwap is an Avani Tech Consultancy MVP that I am
-                    currently contributing to as a full-stack engineer.
-                    SprigSwap is a mobile-first web-app marketplace tailored for
-                    parents and caregivers for buying, selling and giving away
-                    second-hand items for kids.
+                    SprigSwap is an Avani Tech Consultancy MVP. SprigSwap is a
+                    mobile-first web-app marketplace tailored for parents and
+                    caregivers for buying, selling and giving away second-hand
+                    items for kids.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     SprigSwap is a Next.js application written in TypeScript
@@ -172,23 +260,22 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    Bedlam is an Everyrealm product that I contributed to as a
-                    full-stack software engineer. Bedlam is a SaaS platform that
-                    serves as a “link in bio” for competitive and casual gamers
-                    as well as game and content creators.
+                    Bedlam is an Everyrealm product. Bedlam is a web-app
+                    platform that serves as a “link in bio” for both competitive
+                    and casual gamers as well as game and content creators.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
-                    Bedlam uses a modern and diverse tech stack which includes
-                    TypeScript, Next.js, Tailwind CSS with DaisyUI, Zustand,
-                    Auth0, and Vercel for the frontend. The backend uses a suite
-                    of AWS tools such as AWS Lambda, API Gateway, and DynamoDB
+                    Bedlam&apos;s tech-stack includes Next.js, TypeScript,
+                    Tailwind CSS with DaisyUI, Zustand, Auth0, Vercel and
+                    WebFlow for the frontend. The backend uses a suite of AWS
+                    tools such as AWS Lambda, API Gateway, and DynamoDB
                     orchestrated with AWS CDK.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     The platform allows for various third party gaming
                     integrations such as connecting Steam accounts to display
                     real-time in game stats. The platform also offers unlockable
-                    rewards in the form of profile customizations.
+                    rewards in the form of various profile customizations.
                   </p>
                 </div>
                 <div className="pt-2 flex">
@@ -270,10 +357,10 @@ export default function Projects() {
                   </p>
 
                   <p className="mt-2 text-base text-gray-500">
-                    The app offers user authentication using both email/password
-                    and SSO (Single Sign-On) for Google accounts. The app is
-                    fully functional for users without accounts but those who
-                    sign in are able to save their readings.
+                    The app offers user authentication using both email /
+                    password and SSO (Single Sign-On) for Google accounts. The
+                    app is fully functional for users without accounts but those
+                    who sign in are able to save their readings.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     This app can be installed on any desktop or mobile device
@@ -380,13 +467,12 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    Cee Lo is a browser based multiplayer dice game web-app.
+                    Cee Lo is a browser based web-app multiplayer dice game.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     This web-app is built with Next.js 14, TypeScript, and
                     styled with Tailwind CSS. The UI is mobile-first responsive
-                    and features custom CSS animations as well as graphics
-                    generated with AI.
+                    and features custom CSS animations and graphics.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     The app flow offers two game modes, Free Throw and 2 Player.
@@ -885,8 +971,8 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    A marketing website demo developed for a construction
-                    company.{" "}
+                    A marketing website demo developed for a corporate
+                    construction company.{" "}
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     Built with Next.js and styled with Tailwind CSS, the site
@@ -976,7 +1062,7 @@ export default function Projects() {
               <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <p className="text-xl font-semibold text-gray-900">
-                    Full-stack E-commerce Demo
+                    Full-stack E-commerce
                   </p>
                   <Link
                     href="https://thirtysixchambers.herokuapp.com/"
@@ -989,18 +1075,20 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    An e-commerce store that features admin functionality for
-                    managing users, products and orders, PayPal integration, and
-                    customer reviews.
+                    A full-stack e-commerce storefront. The site features full
+                    cart functionality, user reviews and ratings, a custom
+                    checkout flow with a PayPal payment gateway and full admin
+                    functionality for managing users, products and orders.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
-                    The backend is written in Python and features Django and the
-                    Django REST framework to serve a custom built API. The
-                    frontend features React with Bootstrap for UI styling and
-                    Redux for state management. The live demo is using a
-                    PostgreSQL database hosted on AWS. The images are stored in
-                    AWS S3 buckets, the project is deployed to Heroku and PayPal
-                    is set to developer sandbox for testing.
+                    The backend is written in Python and is a Django web-app
+                    featuring the Django REST framework to serve a custom built
+                    API. The frontend is an SPA (Single Page Application) which
+                    features React with Bootstrap for UI styling and Redux for
+                    state management. The live demo is using a PostgreSQL
+                    database hosted on AWS. The images are stored in AWS S3
+                    buckets, the project is deployed to Heroku and PayPal is set
+                    to developer sandbox for testing.
                   </p>
                 </div>
                 <div className="pt-2 flex">
@@ -1052,93 +1140,8 @@ export default function Projects() {
               </div>
             </motion.div>
 
-            {/* WordPress DESIGN */}
-            <motion.div
-              className="flex flex-col rounded-xl shadow-lg overflow-hidden"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {
-                  scale: 0.5,
-                  opacity: 0,
-                },
-                visible: {
-                  scale: 1,
-                  opacity: 1,
-                  transition: {
-                    delay: 0.5,
-                    type: "tween",
-                    duration: 1,
-                  },
-                },
-              }}
-            >
-              <div className="flex-shrink-0">
-                <motion.div whileHover={{ scale: 1.05 }}>
-                  <Image
-                    className="h-48 w-full object-cover"
-                    src="/images/sigilsdoom.gif"
-                    width={600}
-                    height={300}
-                    alt="36 chambers"
-                  />
-                </motion.div>
-              </div>
-              <div className="flex-1 bg-white backdrop-blur-lg p-6 flex flex-col justify-between">
-                <div className="flex-1">
-                  <p className="text-xl font-semibold text-gray-900">
-                    WordPress Development
-                  </p>
-                  <Link href="https://sigilsdoom.com/" legacyBehavior>
-                    <a target="_blank" className="block mt-2">
-                      <p className="mt-3 text-base text-indigo-600 hover:text-cyan-300 cursor-pointer">
-                        sigilsdoom.com
-                      </p>
-                    </a>
-                  </Link>
-                  <p className="mt-3 text-base text-gray-500">
-                    A marketing website for a recording and touring band from
-                    New York.
-                  </p>
-                  <p className="mt-3 text-base text-gray-500">
-                    The site features WordPress, a custom theme, client admin
-                    functionality, SEO, managed hosting and security.
-                  </p>
-                </div>
-                <div className="pt-2 flex">
-                  {/* WORDPRESS SVG */}
-                  <svg
-                    className="w-8 h-8"
-                    aria-hidden="true"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z" />
-                  </svg>
-                  {/* CSS SVG */}
-                  <svg
-                    className="w-8 h-8 pl-1"
-                    aria-hidden="true"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z" />
-                  </svg>
-                </div>
-                <div className="mt-6 flex items-center">
-                  {/* <Link href="">
-                                <a target="_blank" className="text-indigo-600 hover:text-gray-500">
-                                    <span className="sr-only">GitHub</span>
-                                    <svg className="w-8 h-8" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                                </a>
-                            </Link> */}
-                </div>
-              </div>
+            {/* API DEV */}
 
-              {/* API DEV */}
-            </motion.div>
             <motion.div
               className="flex flex-col rounded-xl shadow-lg overflow-hidden"
               initial="hidden"
@@ -1186,9 +1189,10 @@ export default function Projects() {
                     </a>
                   </Link>
                   <p className="mt-3 text-base text-gray-500">
-                    A RESTful API for managing user accounts for Django apps
-                    featuring JWT (JSON Web Token) authentication, and full CRUD
-                    (Create, Read, Update, Delete) functionality.
+                    A modular RESTful API for managing user accounts for Django
+                    web-apps using the Django REST Framework. The API features
+                    JWT (JSON Web Token) authentication, and full CRUD (Create,
+                    Read, Update, Delete) functionality.
                   </p>
                 </div>
                 <div className="pt-2 flex">
