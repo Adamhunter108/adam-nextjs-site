@@ -84,7 +84,7 @@ export default function Projects() {
                     CypherSpace is a web-app for collaborative AI engagement.
                     The platform allows users to engage in private, real-time
                     group chats with access to multiple conversational AI models
-                    as well as multiple AI generative imaging models.
+                    as well as multiple generative AI imaging models.
                   </p>
                   <p className="mt-2 text-base text-gray-500">
                     CypherSpace is comprised of a websocket server, a Next.js
