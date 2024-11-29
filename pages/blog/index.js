@@ -26,7 +26,6 @@ export default function Blog(props) {
         <link rel="icon" href="/adampensive.ico" />
       </Head>
 
-      {/* <NavBar /> */}
       <CornerNav />
 
       <div className="relative bg-gradient-to-t from-cyan-900 via-indigo-900 to-black pt-20 pb-20 px-4 sm:px-6 lg:pt-15 lg:pb-28 lg:px-8">
@@ -112,8 +111,11 @@ export default function Blog(props) {
                         alt="adam pensive"
                       />
                     </div>
-                    <div className="ml-3">
+                    <div className="">
                       <p className="text-sm font-medium text-gray-900">Adam</p>
+                      <p className="justify-end text-xs text-gray-600">
+                        {post.attributes.Body.slice(0, 8)}
+                      </p>
                     </div>
                   </div>
                 </div>
